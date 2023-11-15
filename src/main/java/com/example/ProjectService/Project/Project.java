@@ -1,6 +1,7 @@
 package com.example.ProjectService.Project;
 
-import com.example.ProjectService.Account.Account;
+import com.example.ProjectService.ProjectMember.ProjectMember;
+import com.example.ProjectService.JoinTable.ProjectMembership;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
@@ -15,44 +16,50 @@ public class Project
 
     @jakarta.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+    private Long Id;
 
+    private  String Projectname;
     private String Projectdescription;
 
     private Date Createdat;
 
     private Date Lastupdatedat;
 
-    @ManyToOne()
-    @JoinColumn(name = "account_id")
-    private Account Leader;
+    @JsonIgnore
+    @ManyToOne
+    private ProjectMember Owner;
 
     @JsonIgnore
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(
-            name = "project_account",
-            joinColumns = @JoinColumn(name = "project_id"),
-            inverseJoinColumns = @JoinColumn(name = "account_id")
-    )
-    private Set<Account> ProjectMembers;
+    @OneToMany(mappedBy = "Joinedproject", orphanRemoval = true, fetch = FetchType.LAZY)
+    public Set<ProjectMembership>  Memberships = new HashSet<>();
 
-    public Project(int id, String projectdescription, Date createdat, Date lastupdatedat, Account leader, Set<Account> projectMembers)
+    public Project(Long id, String projectdescription, Date createdat, Date lastupdatedat, ProjectMember owner, Set<ProjectMembership> memberships, String name)
     {
         Id = id;
         Projectdescription = projectdescription;
         Createdat = createdat;
         Lastupdatedat = lastupdatedat;
-        Leader = leader;
-        ProjectMembers = projectMembers;
+        Owner = owner;
+        Memberships = memberships;
+        Projectname = name;
     }
-
-    public Project(String projectdescription, Date createdat, Date lastupdatedat, Account leader, Set<Account> projectMembers)
+    public Project(String projectdescription, Date createdat, Date lastupdatedat, ProjectMember owner, Set<ProjectMembership> memberships, String name)
     {
         Projectdescription = projectdescription;
         Createdat = createdat;
         Lastupdatedat = lastupdatedat;
-        Leader = leader;
-        ProjectMembers = projectMembers;
+        Owner = owner;
+        Memberships = memberships;
+        Projectname = name;
+    }
+
+    public Project(String projectdescription, Date createdat, Date lastupdatedat, ProjectMember owner, String name)
+    {
+        Projectdescription = projectdescription;
+        Createdat = createdat;
+        Lastupdatedat = lastupdatedat;
+        Owner = owner;
+        Projectname = name;
     }
 
     public Project()
@@ -60,45 +67,51 @@ public class Project
 
     }
 
-    public int getId()
+    public String getProjectname()
+    {
+        return Projectname;
+    }
+
+    public Long GetId()
     {
         return Id;
     }
 
-    public String getProjectdescription()
+    public String GetProjectdescription()
     {
         return Projectdescription;
     }
 
-    public Date getCreatedat()
+    public Date GetCreatedat()
     {
         return Createdat;
     }
 
-    public Date getLastupdatedat()
+    public Date GetLastupdatedat()
     {
         return Lastupdatedat;
     }
 
-    public Account getLeader()
+    public ProjectMember GetOwner()
     {
-        return Leader;
+        return Owner;
     }
 
-    public Set<Account> getProjectMembers()
+    public Set<ProjectMembership> GetMemberships()
     {
-        return ProjectMembers;
+        return Memberships;
     }
 
     @Override
     public String toString() {
         return "Project{" +
                 "Id=" + Id +
+                ", Projectname='" + Projectname + '\'' +
                 ", Projectdescription='" + Projectdescription + '\'' +
                 ", Createdat=" + Createdat +
                 ", Lastupdatedat=" + Lastupdatedat +
-                ", Leader=" + Leader +
-                ", ProjectMembers=" + ProjectMembers +
+                ", Owner=" + Owner +
+                ", Memberships=" + Memberships +
                 '}';
     }
 }
