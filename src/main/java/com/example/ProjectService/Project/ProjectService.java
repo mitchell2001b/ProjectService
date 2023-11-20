@@ -1,9 +1,8 @@
 package com.example.ProjectService.Project;
 
-import com.example.ProjectService.JoinTable.ProjectMembership;
 import com.example.ProjectService.ProjectMember.ProjectMember;
-import com.example.ProjectService.dtos.ProjectDto;
-import com.example.ProjectService.dtos.ProjectMemberDto;
+import com.example.ProjectService.Project.dtos.ProjectDto;
+import com.example.ProjectService.Project.dtos.ProjectMemberDto;
 import com.example.ProjectService.repositories.IAccountRepository;
 import com.example.ProjectService.repositories.IProjectRepository;
 import org.slf4j.Logger;
@@ -11,7 +10,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -21,23 +19,34 @@ import java.util.Optional;
 public class ProjectService
 {
     private static final Logger LOGGER = LoggerFactory.getLogger(ProjectService.class);
-    private IProjectRepository ProjectRepository;
-    private IAccountRepository AccountRepository;
+    private IProjectRepository projectRepository;
+    private IAccountRepository accountRepository;
 
     @Autowired
-    public ProjectService(IProjectRepository projectRepository, IAccountRepository accountRepository)
+    public ProjectService(IProjectRepository projectRepo, IAccountRepository accountRepo)
     {
-        this.ProjectRepository = projectRepository;
-        this.AccountRepository = accountRepository;
+        this.projectRepository = projectRepo;
+        this.accountRepository = accountRepo;
     }
 
-    public List<ProjectDto> GetAllProjectsFromOwner(Long ownerId)
+    public List<ProjectDto> GetAllProjectsFromOwner(ProjectMemberDto givenOwnerDto)
     {
-        Optional<ProjectMember> owner = this.AccountRepository.findById(ownerId);
-        ProjectMemberDto ownerDto = new ProjectMemberDto(ownerId, owner.get().GetEmail());
+        Optional<ProjectMember> owner = this.accountRepository.findById(givenOwnerDto.GetId());
+        ProjectMemberDto ownerDto;
+        if(owner.isEmpty())
+        {
+            ProjectMember pm = new ProjectMember(givenOwnerDto.GetId(), givenOwnerDto.GetEmail());
+            this.accountRepository.save(pm);
+            ownerDto = givenOwnerDto;
+        }
+        else
+        {
+            ownerDto = new ProjectMemberDto(givenOwnerDto.GetId(), owner.get().GetEmail());
+        }
+
         List<ProjectDto> projectList = new ArrayList<>();
 
-        for (Project project : this.ProjectRepository.getAllProjectsFromOwner(ownerId))
+        for (Project project : this.projectRepository.getAllProjectsFromOwner(givenOwnerDto.GetId()))
         {
            ProjectDto projectDto = new ProjectDto(project.GetId(), project.GetProjectdescription(), project.GetLastupdatedat(), ownerDto, project.getProjectname());
            projectList.add(projectDto);
@@ -47,24 +56,30 @@ public class ProjectService
     }
     public Optional<Project> SelectProjectById(Long id)
     {
-        return this.ProjectRepository.findById(id);
+        return this.projectRepository.findById(id);
     }
 
     public Project CreateProject(ProjectDto newProject)
     {
 
 
-        Optional<ProjectMember> owner = AccountRepository.findById(newProject.GetOwner().GetId());
+        Optional<ProjectMember> owner = accountRepository.findById(newProject.GetOwner().GetId());
 
-        if(owner != null)
+        if(!owner.isPresent())
         {
             ProjectMember member = new ProjectMember(newProject.GetOwner().GetId(), newProject.GetOwner().GetEmail());
-            AccountRepository.save(member);
+            accountRepository.save(member);
+            owner = accountRepository.findById(newProject.GetOwner().GetId());
         }
-        Project project = new Project(newProject.GetProjectDescription(), new Date(), new Date(), owner.get(), newProject.GetProjectName());
-        LOGGER.info(String.format("new project dto => %s", project.toString()));
-        ProjectRepository.save(project);
-        return this.ProjectRepository.findLastCreatedProject();
+
+        if(!owner.isEmpty())
+        {
+            Project project = new Project(newProject.GetProjectDescription(), new Date(), new Date(), owner.get(), newProject.GetProjectName());
+            LOGGER.info(String.format("new project dto => %s", project.toString()));
+            projectRepository.save(project);
+        }
+
+        return this.projectRepository.findLastCreatedProject();
         //return null;
     }
 

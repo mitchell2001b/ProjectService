@@ -35,4 +35,12 @@ public class ProjectMember
     {
         return Email;
     }
+
+    @Override
+    public String toString() {
+        return "ProjectMember{" +
+                "Id=" + Id +
+                ", Email='" + Email + '\'' +
+                '}';
+    }
 }
