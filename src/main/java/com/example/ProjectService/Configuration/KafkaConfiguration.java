@@ -11,6 +11,7 @@ public class KafkaConfiguration
     private String topicName;
 
     // spring bean for kafka topic
+    //test
     @Bean
     public NewTopic topic()
     {
