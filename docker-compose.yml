@@ -8,7 +8,7 @@ services:
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
     networks:
-      - messagebus_semester6_network
+      - semester6project_network
 
   kafka-manager:
       container_name: kafkaManagerContainer
@@ -18,7 +18,7 @@ services:
       environment:
         ZK_HOSTS: "zookeeperContainer:2181"
       networks:
-        - messagebus_semester6_network
+        - semester6project_network
 
   kafka:
     container_name: kafkaContainer
@@ -35,7 +35,7 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 3
     networks:
-      - messagebus_semester6_network
+      - semester6project_network
 
   kafka2:
     container_name: kafkaContainer2
@@ -52,7 +52,7 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 3
     networks:
-      - messagebus_semester6_network
+      - semester6project_network
 
   kafka3:
     container_name: kafkaContainer3
@@ -69,7 +69,7 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 3
     networks:
-      - messagebus_semester6_network
+      - semester6project_network
 
   projectservice:
     container_name: projectservicecontainer
