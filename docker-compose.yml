@@ -77,7 +77,7 @@ services:
     ports:
       - "${SPRING_LOCAL_PORT}:${SPRING_DOCKER_PORT}"
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-db:${MYSQLDB_LOCAL_PORT}/${MYSQLDB_DATABASE}
+      - SPRING_DATASOURCE_URL=jdbc:mysql://project-db:${MYSQLDB_LOCAL_PORT}/${MYSQLDB_DATABASE}
     networks:
       - semester6project_network
     depends_on:
