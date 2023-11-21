@@ -98,8 +98,6 @@ services:
     image: ghcr.io/mitchell2001b/taskboardingfrontend:main
     build:
       context: ../TaskboardingFrontend
-    env_file:
-      - ../TaskboardingFrontend/.env
     ports:
       - "${REACT_LOCAL_PORT}:${REACT_DOCKER_PORT}"
     networks:
