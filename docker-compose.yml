@@ -93,6 +93,18 @@ services:
     networks:
       - semester6project_network
 
+  taskboarding-frontend:
+    container_name: taskboarding-frontend
+    image: ghcr.io/mitchell2001b/taskboardingfrontend:main
+    build:
+      context: ../TaskboardingFrontend
+    env_file:
+      - ../TaskboardingFrontend/.env
+    ports:
+      - "${REACT_LOCAL_PORT}:${REACT_DOCKER_PORT}"
+    networks:
+      - semester6project_network
+
 networks:
   semester6project_network:
     name: semester6project_network
