@@ -2,8 +2,11 @@ package com.example.ProjectService.Project;
 
 import com.example.ProjectService.Project.dtos.ProjectDto;
 import com.example.ProjectService.Project.dtos.ProjectMemberDto;
+import io.lettuce.core.RedisCommandTimeoutException;
+import io.lettuce.core.RedisConnectionException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.redis.RedisConnectionFailureException;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -52,9 +55,34 @@ public class ProjectController
         {
             return ResponseEntity.badRequest().build();
         }
+        List<ProjectDto> dtos = null;
 
-        List<ProjectDto> dtos = this.projectService.GetAllProjectsFromOwner(ownerDto);
-        return ResponseEntity.ok(dtos);
+        try
+        {
+            dtos = this.projectService.GetAllProjectsFromOwner(ownerDto);
+            return ResponseEntity.ok(dtos);
+        }
+        catch (RedisConnectionFailureException e)
+        {
+            dtos = this.projectService.GetAllProjectsFromOwnerInDb(ownerDto);
+            return ResponseEntity.ok(dtos);
+        }
+        catch (RedisConnectionException e)
+        {
+            dtos = this.projectService.GetAllProjectsFromOwnerInDb(ownerDto);
+            return ResponseEntity.ok(dtos);
+        }
+        catch (RedisCommandTimeoutException e)
+        {
+            dtos = this.projectService.GetAllProjectsFromOwnerInDb(ownerDto);
+            return ResponseEntity.ok(dtos);
+        }
+        catch (Exception e)
+        {
+            LOGGER.error("Error getting my projects", e);
+        }
+        return null;
+
     }
     @GetMapping(value = "/tess")
     public String tess()

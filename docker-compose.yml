@@ -103,6 +103,14 @@ services:
     networks:
       - semester6project_network
 
+  redis:
+    container_name: redisContainer
+    image: redis:7.2.3
+    ports:
+      - "${REDIS_LOCAL_PORT}:${REDIS_DOCKER_PORT}"
+    networks:
+      - semester6project_network
+
 networks:
   semester6project_network:
     name: semester6project_network
