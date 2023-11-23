@@ -31,5 +31,5 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Set workflow status output
-        id: set-status
-        run: echo "::set-output name=workflow-status::${{ job.status }}"
+      id: set-status
+      run: echo "::set-output name=workflow-status::${{ job.status }}"
