@@ -93,11 +93,13 @@ class ProjectControllerTests {
     }
 
     @Test
+    @Sql("/AddTestData.sql")
     void shouldCreateProject() throws Exception {
 
+        //user already exists in Database
         ProjectMemberDto owner = new ProjectMemberDto(140L, "testuser140@gmail.com");
-        ProjectDto project = new ProjectDto("description1", new Date(), owner, "project66"); // Adjust the data as needed
-
+        ProjectDto project = new ProjectDto("description1", new Date(), owner, "project66");
+        //ProjectDto project2 = new ProjectDto("description2", new Date(), owner, "project662");
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
 
@@ -107,14 +109,15 @@ class ProjectControllerTests {
                         .content(objectMapper.writeValueAsString(project))
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isCreated())
-                .andExpect(jsonPath("id").value(1));// Assuming the response contains the project ID
+                .andExpect(jsonPath("id").value(4));
     }
 
     @Test
     @Sql("/AddTestData2.sql")
-    void shouldCreateProjectScenario2() throws Exception {
+    void shouldCreateProjectWithNewUser() throws Exception {
 
-        ProjectMemberDto owner = new ProjectMemberDto(140L, "testuser140@gmail.com");
+        //user doesn't exist in Database yet
+        ProjectMemberDto owner = new ProjectMemberDto(144L, "testuser144@gmail.com");
         ProjectDto project = new ProjectDto("description16666", new Date(), owner, "project666666");
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
@@ -134,8 +137,24 @@ class ProjectControllerTests {
     void shouldNotCreateProject() throws Exception {
 
         ProjectMemberDto owner = new ProjectMemberDto(140L, "testuser140@gmail.com");
-        ProjectDto project = new ProjectDto("description16666", new Date(), owner, "project666666");
 
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.registerModule(new JavaTimeModule());
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/api/projects/create")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(null))
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(MockMvcResultMatchers.status().isBadRequest());
+
+
+    }
+    @Test
+    @Sql("/AddTestData.sql")
+    void shouldNotCreateProjectAndThrowConflicted() throws Exception {
+
+        ProjectMemberDto owner = new ProjectMemberDto(140L, "testuser140@gmail.com");
+        ProjectDto project = new ProjectDto("description16666", new Date(), owner, "thisnameiswaytolongforaprojectandsonotallowed");
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
 
@@ -144,7 +163,5 @@ class ProjectControllerTests {
                         .content(objectMapper.writeValueAsString(project))
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isConflict());
-
-
     }
 }

@@ -1,0 +1,5 @@
+INSERT INTO `projectmember` (`id`, `email`) VALUES (140, 'testuser140@gmail.com');
+INSERT INTO `projectmember` (`id`, `email`) VALUES (142, 'testuser142@gmail.com');
+INSERT INTO `project` (`id`, `createdat`, `lastupdatedat`, `projectdescription`, `owner_id`, `projectname`) VALUES (1, '2023-11-16 23:51:28.000000', '2023-11-11 23:51:28.000000', 'test beschrijving 1', 140, 'test project 1');
+INSERT INTO `project` (`id`, `createdat`, `lastupdatedat`, `projectdescription`, `owner_id`, `projectname`) VALUES (2, '2023-11-16 23:51:28.000000', '2023-11-11 23:51:28.000000', 'test beschrijving 2', 140, 'test project 2');
+INSERT INTO `project` (`id`, `createdat`, `lastupdatedat`, `projectdescription`, `owner_id`, `projectname`) VALUES (3, '2023-11-16 23:51:28.000000', '2023-11-11 23:51:28.000000', 'test beschrijving 3', 140, 'test project 3');

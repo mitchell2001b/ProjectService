@@ -3,7 +3,9 @@ package com.example.ProjectService.Project;
 import com.example.ProjectService.ProjectMember.ProjectMember;
 import com.example.ProjectService.JoinTable.ProjectMembership;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
+import org.antlr.v4.runtime.misc.NotNull;
 
 import java.util.Date;
 import java.util.HashSet;
@@ -18,13 +20,14 @@ public class Project
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
+    @Column(nullable = false, length = 20)
     private  String Projectname;
+    @Column(nullable = false, length = 50)
     private String Projectdescription;
-
+    @Column(nullable = false)
     private Date Createdat;
-
+    @Column(nullable = false)
     private Date Lastupdatedat;
-
     @JsonIgnore
     @ManyToOne
     private ProjectMember Owner;

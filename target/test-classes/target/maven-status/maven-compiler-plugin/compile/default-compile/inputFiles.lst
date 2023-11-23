@@ -5,6 +5,7 @@ D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\Proje
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\Project\dtos\ProjectMembershipDto.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\Configuration\KafkaConfiguration.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\Project\ProjectService.java
+D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\Configuration\CacheConfig.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\Project\Project.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\ProjectMember\ProjectMember.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\Project\ProjectController.java
@@ -12,5 +13,6 @@ D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\Proje
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\repositories\IProjectRepository.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\Project\dtos\ProjectDto.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\ProjectRole\ProjectRole.java
+D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\Configuration\CustomCacheErrorHandler.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\JoinTable\ProjectAccountRole.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\Project\dtos\ProjectRoleDto.java
