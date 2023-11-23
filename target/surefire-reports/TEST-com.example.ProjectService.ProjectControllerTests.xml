@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.ProjectService.ProjectControllerTests" time="13.252" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.ProjectService.ProjectControllerTests" time="12.876" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="NL"/>
     <property name="sun.boot.library.path" value="C:\Users\mitch\.jdks\corretto-17.0.8.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\mitch\AppData\Local\Temp\surefire14550272384192117204\surefirebooter-20231123235822088_3.jar C:\Users\mitch\AppData\Local\Temp\surefire14550272384192117204 2023-11-23T23-58-21_868-jvmRun1 surefire-20231123235822088_1tmp surefire_0-20231123235822088_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\mitch\AppData\Local\Temp\surefire5757440713899577548\surefirebooter-20231124000556079_3.jar C:\Users\mitch\AppData\Local\Temp\surefire5757440713899577548 2023-11-24T00-05-55_919-jvmRun1 surefire-20231124000556079_1tmp surefire_0-20231124000556079_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\projecten\semester6individueel\ProjectService\target\test-classes;D:\projecten\semester6individueel\ProjectService\target\classes;C:\Users\mitch\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.1.5\spring-boot-starter-data-jpa-3.1.5.jar;C:\Users\mitch\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.1.5\spring-boot-starter-aop-3.1.5.jar;C:\Users\mitch\.m2\repository\org\springframework\spring-aop\6.0.13\spring-aop-6.0.13.jar;C:\Users\mitch\.m2\repository\org\aspectj\aspectjweaver\1.9.20\aspectjweaver-1.9.20.jar;C:\Users\mitch\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.1.5\spring-boot-starter-jdbc-3.1.5.jar;C:\Users\mitch\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\mitch\.m2\repository\org\springframework\spring-jdbc\6.0.13\spring-jdbc-6.0.13.jar;C:\Users\mitch\.m2\repository\org\hibernate\orm\hibernate-core\6.2.13.Final\hibernate-core-6.2.13.Final.jar;C:\Users\mitch\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\mitch\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\mitch\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\mitch\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\mitch\.m2\repository\io\smallrye\jandex\3.0.5\jandex-3.0.5.jar;C:\Users\mitch\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\mitch\.m2\repository\net\bytebuddy\byte-buddy\1.14.9\byte-buddy-1.14.9.jar;C:\Users\mitch\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.3\jaxb-runtime-4.0.3.jar;C:\Users\mitch\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.3\jaxb-core-4.0.3.jar;C:\Users\mitch\.m2\repository\org\eclipse\angus\angus-activation\2.0.1\angus-activation-2.0.1.jar;C:\Users\mitch\.m2\repository\org\glassfish\jaxb\txw2\4.0.3\txw2-4.0.3.jar;C:\Users\mitch\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\mitch\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\mitch\.m2\repository\org\antlr\antlr4-runtime\4.10.1\antlr4-runtime-4.10.1.jar;C:\Users\mitch\.m2\repository\org\springframework\data\spring-data-jpa\3.1.5\spring-data-jpa-3.1.5.jar;C:\Users\mitch\.m2\repository\org\springframework\data\spring-data-commons\3.1.5\spring-data-commons-3.1.5.jar;C:\Users\mitch\.m2\repository\org\springframework\spring-orm\6.0.13\spring-orm-6.0.13.jar;C:\Users\mitch\.m2\repository\org\springframework\spring-beans\6.0.13\spring-beans-6.0.13.jar;C:\Users\mitch\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\mitch\.m2\repository\org\slf4j\slf4j-api\2.0.9\slf4j-api-2.0.9.jar;C:\Users\mitch\.m2\repository\org\springframework\spring-aspects\6.0.13\spring-aspects-6.0.13.jar;C:\Users\mitch\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.1.5\spring-boot-starter-web-3.1.5.jar;C:\Users\mitch\.m2\repository\org\springframework\boot\spring-boot-starter\3.1.5\spring-boot-starter-3.1.5.jar;C:\Users\mitch\.m2\repository\org\springframework\boot\spring-boot\3.1.5\spring-boot-3.1.5.jar;C:\Users\mitch\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.1.5\spring-boot-autoconfigure-3.1.5.jar;C:\Users\mitch\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.1.5\spring-boot-starter-logging-3.1.5.jar;C:\Users\mitch\.m2\repository\ch\qos\logback\logback-classic\1.4.11\logback-classic-1.4.11.jar;C:\Users\mitch\.m2\repository\ch\qos\logback\logback-core\1.4.11\logback-core-1.4.11.jar;C:\Users\mitch\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.20.0\log4j-to-slf4j-2.20.0.jar;C:\Users\mitch\.m2\repository\org\apache\logging\log4j\log4j-api\2.20.0\log4j-api-2.20.0.jar;C:\Users\mitch\.m2\repository\org\slf4j\jul-to-slf4j\2.0.9\jul-to-slf4j-2.0.9.jar;C:\Users\mitch\.m2\repository\org\yaml\snakeyaml\1.33\snakeyaml-1.33.jar;C:\Users\mitch\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.1.5\spring-boot-starter-json-3.1.5.jar;C:\Users\mitch\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.3\jackson-databind-2.15.3.jar;C:\Users\mitch\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.3\jackson-annotations-2.15.3.jar;C:\Users\mitch\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.3\jackson-core-2.15.3.jar;C:\Users\mitch\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.3\jackson-datatype-jdk8-2.15.3.jar;C:\Users\mitch\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.3\jackson-datatype-jsr310-2.15.3.jar;C:\Users\mitch\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.3\jackson-module-parameter-names-2.15.3.jar;C:\Users\mitch\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.1.5\spring-boot-starter-tomcat-3.1.5.jar;C:\Users\mitch\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.15\tomcat-embed-core-10.1.15.jar;C:\Users\mitch\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.15\tomcat-embed-el-10.1.15.jar;C:\Users\mitch\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.15\tomcat-embed-websocket-10.1.15.jar;C:\Users\mitch\.m2\repository\org\springframework\spring-web\6.0.13\spring-web-6.0.13.jar;C:\Users\mitch\.m2\repository\org\springframework\spring-webmvc\6.0.13\spring-webmvc-6.0.13.jar;C:\Users\mitch\.m2\repository\org\springframework\spring-expression\6.0.13\spring-expression-6.0.13.jar;C:\Users\mitch\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.1.5\spring-boot-starter-test-3.1.5.jar;C:\Users\mitch\.m2\repository\org\springframework\boot\spring-boot-test\3.1.5\spring-boot-test-3.1.5.jar;C:\Users\mitch\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.1.5\spring-boot-test-autoconfigure-3.1.5.jar;C:\Users\mitch\.m2\repository\com\jayway\jsonpath\json-path\2.8.0\json-path-2.8.0.jar;C:\Users\mitch\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.1\jakarta.xml.bind-api-4.0.1.jar;C:\Users\mitch\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\mitch\.m2\repository\net\minidev\json-smart\2.4.11\json-smart-2.4.11.jar;C:\Users\mitch\.m2\repository\net\minidev\accessors-smart\2.4.11\accessors-smart-2.4.11.jar;C:\Users\mitch\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\mitch\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\mitch\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\mitch\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.3\junit-jupiter-5.9.3.jar;C:\Users\mitch\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.3\junit-jupiter-params-5.9.3.jar;C:\Users\mitch\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\mitch\.m2\repository\org\mockito\mockito-core\5.3.1\mockito-core-5.3.1.jar;C:\Users\mitch\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.9\byte-buddy-agent-1.14.9.jar;C:\Users\mitch\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\mitch\.m2\repository\org\mockito\mockito-junit-jupiter\5.3.1\mockito-junit-jupiter-5.3.1.jar;C:\Users\mitch\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\mitch\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\mitch\.m2\repository\org\springframework\spring-core\6.0.13\spring-core-6.0.13.jar;C:\Users\mitch\.m2\repository\org\springframework\spring-jcl\6.0.13\spring-jcl-6.0.13.jar;C:\Users\mitch\.m2\repository\org\springframework\spring-test\6.0.13\spring-test-6.0.13.jar;C:\Users\mitch\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\mitch\.m2\repository\org\springframework\kafka\spring-kafka\3.0.12\spring-kafka-3.0.12.jar;C:\Users\mitch\.m2\repository\org\springframework\spring-context\6.0.13\spring-context-6.0.13.jar;C:\Users\mitch\.m2\repository\org\springframework\spring-messaging\6.0.13\spring-messaging-6.0.13.jar;C:\Users\mitch\.m2\repository\org\springframework\spring-tx\6.0.13\spring-tx-6.0.13.jar;C:\Users\mitch\.m2\repository\org\springframework\retry\spring-retry\2.0.4\spring-retry-2.0.4.jar;C:\Users\mitch\.m2\repository\org\apache\kafka\kafka-clients\3.4.1\kafka-clients-3.4.1.jar;C:\Users\mitch\.m2\repository\com\github\luben\zstd-jni\1.5.2-1\zstd-jni-1.5.2-1.jar;C:\Users\mitch\.m2\repository\org\lz4\lz4-java\1.8.0\lz4-java-1.8.0.jar;C:\Users\mitch\.m2\repository\org\xerial\snappy\snappy-java\1.1.8.4\snappy-java-1.1.8.4.jar;C:\Users\mitch\.m2\repository\io\micrometer\micrometer-observation\1.11.5\micrometer-observation-1.11.5.jar;C:\Users\mitch\.m2\repository\io\micrometer\micrometer-commons\1.11.5\micrometer-commons-1.11.5.jar;C:\Users\mitch\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\mitch\.m2\repository\org\springframework\kafka\spring-kafka-test\3.0.11\spring-kafka-test-3.0.11.jar;C:\Users\mitch\.m2\repository\org\apache\zookeeper\zookeeper\3.6.3\zookeeper-3.6.3.jar;C:\Users\mitch\.m2\repository\org\apache\zookeeper\zookeeper-jute\3.6.3\zookeeper-jute-3.6.3.jar;C:\Users\mitch\.m2\repository\org\apache\yetus\audience-annotations\0.5.0\audience-annotations-0.5.0.jar;C:\Users\mitch\.m2\repository\io\netty\netty-handler\4.1.100.Final\netty-handler-4.1.100.Final.jar;C:\Users\mitch\.m2\repository\io\netty\netty-resolver\4.1.100.Final\netty-resolver-4.1.100.Final.jar;C:\Users\mitch\.m2\repository\io\netty\netty-buffer\4.1.100.Final\netty-buffer-4.1.100.Final.jar;C:\Users\mitch\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.100.Final\netty-transport-native-unix-common-4.1.100.Final.jar;C:\Users\mitch\.m2\repository\io\netty\netty-codec\4.1.100.Final\netty-codec-4.1.100.Final.jar;C:\Users\mitch\.m2\repository\io\netty\netty-transport-native-epoll\4.1.100.Final\netty-transport-native-epoll-4.1.100.Final.jar;C:\Users\mitch\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.100.Final\netty-transport-classes-epoll-4.1.100.Final.jar;C:\Users\mitch\.m2\repository\org\apache\kafka\kafka-clients\3.4.1\kafka-clients-3.4.1-test.jar;C:\Users\mitch\.m2\repository\org\apache\kafka\kafka-metadata\3.4.1\kafka-metadata-3.4.1.jar;C:\Users\mitch\.m2\repository\org\apache\kafka\kafka-server-common\3.4.1\kafka-server-common-3.4.1.jar;C:\Users\mitch\.m2\repository\org\apache\kafka\kafka-raft\3.4.1\kafka-raft-3.4.1.jar;C:\Users\mitch\.m2\repository\com\yammer\metrics\metrics-core\2.2.0\metrics-core-2.2.0.jar;C:\Users\mitch\.m2\repository\org\apache\kafka\kafka-streams-test-utils\3.4.1\kafka-streams-test-utils-3.4.1.jar;C:\Users\mitch\.m2\repository\org\apache\kafka\kafka-streams\3.4.1\kafka-streams-3.4.1.jar;C:\Users\mitch\.m2\repository\org\rocksdb\rocksdbjni\7.1.2\rocksdbjni-7.1.2.jar;C:\Users\mitch\.m2\repository\org\apache\kafka\kafka_2.13\3.4.1\kafka_2.13-3.4.1.jar;C:\Users\mitch\.m2\repository\org\scala-lang\scala-library\2.13.10\scala-library-2.13.10.jar;C:\Users\mitch\.m2\repository\org\apache\kafka\kafka-group-coordinator\3.4.1\kafka-group-coordinator-3.4.1.jar;C:\Users\mitch\.m2\repository\org\apache\kafka\kafka-storage\3.4.1\kafka-storage-3.4.1.jar;C:\Users\mitch\.m2\repository\org\apache\kafka\kafka-storage-api\3.4.1\kafka-storage-api-3.4.1.jar;C:\Users\mitch\.m2\repository\net\sourceforge\argparse4j\argparse4j\0.7.0\argparse4j-0.7.0.jar;C:\Users\mitch\.m2\repository\com\fasterxml\jackson\module\jackson-module-scala_2.13\2.15.3\jackson-module-scala_2.13-2.15.3.jar;C:\Users\mitch\.m2\repository\com\thoughtworks\paranamer\paranamer\2.8\paranamer-2.8.jar;C:\Users\mitch\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-csv\2.15.3\jackson-dataformat-csv-2.15.3.jar;C:\Users\mitch\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\mitch\.m2\repository\org\bitbucket\b_c\jose4j\0.9.3\jose4j-0.9.3.jar;C:\Users\mitch\.m2\repository\org\scala-lang\modules\scala-collection-compat_2.13\2.10.0\scala-collection-compat_2.13-2.10.0.jar;C:\Users\mitch\.m2\repository\org\scala-lang\modules\scala-java8-compat_2.13\1.0.2\scala-java8-compat_2.13-1.0.2.jar;C:\Users\mitch\.m2\repository\org\scala-lang\scala-reflect\2.13.10\scala-reflect-2.13.10.jar;C:\Users\mitch\.m2\repository\com\typesafe\scala-logging\scala-logging_2.13\3.9.4\scala-logging_2.13-3.9.4.jar;C:\Users\mitch\.m2\repository\io\dropwizard\metrics\metrics-core\4.2.21\metrics-core-4.2.21.jar;C:\Users\mitch\.m2\repository\commons-cli\commons-cli\1.4\commons-cli-1.4.jar;C:\Users\mitch\.m2\repository\org\apache\kafka\kafka_2.13\3.4.1\kafka_2.13-3.4.1-test.jar;C:\Users\mitch\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\mitch\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\mitch\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\mitch\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\mitch\.m2\repository\org\junit\platform\junit-platform-launcher\1.9.3\junit-platform-launcher-1.9.3.jar;C:\Users\mitch\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;C:\Users\mitch\.m2\repository\com\h2database\h2\2.1.214\h2-2.1.214.jar;C:\Users\mitch\.m2\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar;C:\Users\mitch\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\mitch\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;C:\Users\mitch\.m2\repository\org\springframework\boot\spring-boot-starter-data-redis\3.1.5\spring-boot-starter-data-redis-3.1.5.jar;C:\Users\mitch\.m2\repository\org\springframework\data\spring-data-redis\3.1.5\spring-data-redis-3.1.5.jar;C:\Users\mitch\.m2\repository\org\springframework\data\spring-data-keyvalue\3.1.5\spring-data-keyvalue-3.1.5.jar;C:\Users\mitch\.m2\repository\org\springframework\spring-oxm\6.0.13\spring-oxm-6.0.13.jar;C:\Users\mitch\.m2\repository\io\lettuce\lettuce-core\6.2.6.RELEASE\lettuce-core-6.2.6.RELEASE.jar;C:\Users\mitch\.m2\repository\io\netty\netty-common\4.1.100.Final\netty-common-4.1.100.Final.jar;C:\Users\mitch\.m2\repository\io\netty\netty-transport\4.1.100.Final\netty-transport-4.1.100.Final.jar;C:\Users\mitch\.m2\repository\io\projectreactor\reactor-core\3.5.11\reactor-core-3.5.11.jar;C:\Users\mitch\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\mitch\.m2\repository\org\springframework\boot\spring-boot-starter-cache\3.1.5\spring-boot-starter-cache-3.1.5.jar;C:\Users\mitch\.m2\repository\org\springframework\spring-context-support\6.0.13\spring-context-support-6.0.13.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -34,7 +34,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="FILE_LOG_CHARSET" value="windows-1252"/>
     <property name="java.awt.headless" value="true"/>
-    <property name="surefire.real.class.path" value="C:\Users\mitch\AppData\Local\Temp\surefire14550272384192117204\surefirebooter-20231123235822088_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\mitch\AppData\Local\Temp\surefire5757440713899577548\surefirebooter-20231124000556079_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.8.1+8-LTS"/>
@@ -49,16 +49,16 @@
     <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-17/issues/"/>
     <property name="java.io.tmpdir" value="C:\Users\mitch\AppData\Local\Temp\"/>
     <property name="idea.version" value="2022.1.4"/>
-    <property name="catalina.home" value="C:\Users\mitch\AppData\Local\Temp\tomcat.0.4687831421365307601"/>
+    <property name="catalina.home" value="C:\Users\mitch\AppData\Local\Temp\tomcat.0.15760917498710546786"/>
     <property name="com.zaxxer.hikari.pool_number" value="8"/>
     <property name="java.version" value="17.0.8.1"/>
     <property name="user.dir" value="D:\projecten\semester6individueel\ProjectService"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="31980"/>
+    <property name="PID" value="12200"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="CONSOLE_LOG_CHARSET" value="windows-1252"/>
-    <property name="catalina.base" value="C:\Users\mitch\AppData\Local\Temp\tomcat.0.10307810983283649935"/>
+    <property name="catalina.base" value="C:\Users\mitch\AppData\Local\Temp\tomcat.0.9522602970400585480"/>
     <property name="native.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Users\mitch\.jdks\corretto-17.0.8.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;D:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;D:\Program Files\Git\cmd;C:\Users\mitch\AppData\Local\Microsoft\WindowsApps;C:\Users\mitch\.dotnet\tools;D:\Users\mitch\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Azure Data Studio\bin;C:\Users\mitch\AppData\Roaming\npm;C:\Users\mitch\AppData\Local\GitHubDesktop\bin;D:\Program Files (x86)\cmake-3.26.0-windows-x86_64\bin;;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
@@ -67,7 +67,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="shouldGetNoProjectsFromAccounts" classname="com.example.ProjectService.ProjectControllerTests" time="1.102">
+  <testcase name="shouldGetNoProjectsFromAccounts" classname="com.example.ProjectService.ProjectControllerTests" time="1.076">
     <system-out><![CDATA[
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -77,60 +77,60 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.5)
 
-2023-11-23T23:58:23.485+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : Starting ProjectControllerTests using Java 17.0.8.1 with PID 31980 (started by mitch in D:\projecten\semester6individueel\ProjectService)
-2023-11-23T23:58:23.487+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : The following 1 profile is active: "test"
-2023-11-23T23:58:24.176+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-11-23T23:58:24.176+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-23T23:58:24.289+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 2 JPA repository interfaces.
-2023-11-23T23:58:24.310+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-11-23T23:58:24.310+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-11-23T23:58:24.326+01:00  INFO 31980 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2023-11-23T23:58:24.326+01:00  INFO 31980 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IProjectRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2023-11-23T23:58:24.326+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
-2023-11-23T23:58:26.544+01:00  INFO 31980 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-11-23T23:58:26.579+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-23T23:58:26.580+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
-2023-11-23T23:58:26.717+01:00  INFO 31980 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-23T23:58:26.717+01:00  INFO 31980 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3222 ms
-2023-11-23T23:58:27.031+01:00  INFO 31980 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-23T23:58:27.140+01:00  INFO 31980 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
-2023-11-23T23:58:27.140+01:00  INFO 31980 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-11-23T23:58:27.376+01:00  INFO 31980 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-11-23T23:58:27.407+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-23T23:58:27.595+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:db user=SA
-2023-11-23T23:58:27.596+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-23T23:58:27.627+01:00  WARN 31980 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2023-11-23T23:58:27.972+01:00  WARN 31980 --- [           main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ProjectService.JoinTable.ProjectMembership
-2023-11-23T23:58:27.972+01:00  WARN 31980 --- [           main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ProjectService.JoinTable.ProjectMembership
-2023-11-23T23:58:28.370+01:00  INFO 31980 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-11-23T23:58:28.385+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
-2023-11-23T23:58:28.385+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
-2023-11-23T23:58:28.385+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
-2023-11-23T23:58:28.385+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
-2023-11-23T23:58:28.385+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table project (createdat timestamp(6) not null, id bigint generated by default as identity, lastupdatedat timestamp(6) not null, owner_id bigint, projectname varchar(20) not null, projectdescription varchar(50) not null, primary key (id))
-2023-11-23T23:58:28.401+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectmember (id bigint not null, email varchar(255) unique, primary key (id))
-2023-11-23T23:58:28.401+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectmembership (joinedproject_id bigint not null, member_id bigint not null, role_id bigint not null, primary key (joinedproject_id, member_id, role_id))
-2023-11-23T23:58:28.401+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectrole (id bigint generated by default as identity, name varchar(255) unique, primary key (id))
-2023-11-23T23:58:28.401+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists project add constraint FKgela6raf25bsa6thxog5x8lkv foreign key (owner_id) references projectmember
-2023-11-23T23:58:28.401+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKr5hoxnh9k5nutty4hon93c6fe foreign key (joinedproject_id) references project
-2023-11-23T23:58:28.401+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKt45jjcbtrrsgom05jwu0fje4b foreign key (member_id) references projectmember
-2023-11-23T23:58:28.401+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKfnovlarbluovef58uneoi1li1 foreign key (role_id) references projectrole
-2023-11-23T23:58:28.417+01:00  INFO 31980 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-23T23:58:28.981+01:00  INFO 31980 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2023-11-23T23:58:29.333+01:00  WARN 31980 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-23T23:58:30.324+01:00  INFO 31980 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
-2023-11-23T23:58:30.324+01:00  INFO 31980 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-11-23T23:58:30.324+01:00  INFO 31980 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2023-11-23T23:58:30.418+01:00  INFO 31980 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63097 (http) with context path ''
-2023-11-23T23:58:30.434+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : Started ProjectControllerTests in 7.249 seconds (process running for 8.219)
-2023-11-23T23:58:30.502+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-11-23T23:58:30.518+01:00  INFO 31980 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-23T23:58:30.518+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
-2023-11-23T23:58:30.518+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
-2023-11-23T23:58:30.518+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
-2023-11-23T23:58:30.518+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
-2023-11-23T23:58:30.533+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-11-23T23:58:30.533+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-24T00:05:57.269+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : Starting ProjectControllerTests using Java 17.0.8.1 with PID 12200 (started by mitch in D:\projecten\semester6individueel\ProjectService)
+2023-11-24T00:05:57.272+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : The following 1 profile is active: "test"
+2023-11-24T00:05:57.888+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-24T00:05:57.890+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-24T00:05:58.013+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 2 JPA repository interfaces.
+2023-11-24T00:05:58.028+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-24T00:05:58.029+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-24T00:05:58.043+01:00  INFO 12200 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-24T00:05:58.043+01:00  INFO 12200 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IProjectRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-24T00:05:58.043+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2023-11-24T00:06:00.162+01:00  INFO 12200 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-11-24T00:06:00.189+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-24T00:06:00.189+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-24T00:06:00.354+01:00  INFO 12200 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-24T00:06:00.356+01:00  INFO 12200 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3068 ms
+2023-11-24T00:06:00.741+01:00  INFO 12200 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-24T00:06:00.832+01:00  INFO 12200 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-11-24T00:06:00.836+01:00  INFO 12200 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-24T00:06:01.087+01:00  INFO 12200 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-24T00:06:01.112+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-24T00:06:01.316+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:db user=SA
+2023-11-24T00:06:01.320+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-24T00:06:01.372+01:00  WARN 12200 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-24T00:06:01.720+01:00  WARN 12200 --- [           main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ProjectService.JoinTable.ProjectMembership
+2023-11-24T00:06:01.720+01:00  WARN 12200 --- [           main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ProjectService.JoinTable.ProjectMembership
+2023-11-24T00:06:02.115+01:00  INFO 12200 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-24T00:06:02.126+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
+2023-11-24T00:06:02.129+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
+2023-11-24T00:06:02.129+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
+2023-11-24T00:06:02.129+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
+2023-11-24T00:06:02.132+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table project (createdat timestamp(6) not null, id bigint generated by default as identity, lastupdatedat timestamp(6) not null, owner_id bigint, projectname varchar(20) not null, projectdescription varchar(50) not null, primary key (id))
+2023-11-24T00:06:02.139+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectmember (id bigint not null, email varchar(255) unique, primary key (id))
+2023-11-24T00:06:02.141+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectmembership (joinedproject_id bigint not null, member_id bigint not null, role_id bigint not null, primary key (joinedproject_id, member_id, role_id))
+2023-11-24T00:06:02.142+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectrole (id bigint generated by default as identity, name varchar(255) unique, primary key (id))
+2023-11-24T00:06:02.143+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists project add constraint FKgela6raf25bsa6thxog5x8lkv foreign key (owner_id) references projectmember
+2023-11-24T00:06:02.152+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKr5hoxnh9k5nutty4hon93c6fe foreign key (joinedproject_id) references project
+2023-11-24T00:06:02.153+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKt45jjcbtrrsgom05jwu0fje4b foreign key (member_id) references projectmember
+2023-11-24T00:06:02.154+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKfnovlarbluovef58uneoi1li1 foreign key (role_id) references projectrole
+2023-11-24T00:06:02.158+01:00  INFO 12200 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-24T00:06:02.690+01:00  INFO 12200 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-11-24T00:06:03.030+01:00  WARN 12200 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-24T00:06:04.101+01:00  INFO 12200 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2023-11-24T00:06:04.101+01:00  INFO 12200 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-11-24T00:06:04.102+01:00  INFO 12200 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-11-24T00:06:04.232+01:00  INFO 12200 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 49356 (http) with context path ''
+2023-11-24T00:06:04.245+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : Started ProjectControllerTests in 7.238 seconds (process running for 8.048)
+2023-11-24T00:06:04.296+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-24T00:06:04.315+01:00  INFO 12200 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-24T00:06:04.316+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
+2023-11-24T00:06:04.318+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
+2023-11-24T00:06:04.319+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
+2023-11-24T00:06:04.319+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
+2023-11-24T00:06:04.323+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-24T00:06:04.325+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -140,61 +140,61 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.5)
 
-2023-11-23T23:58:30.564+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : Starting ProjectControllerTests using Java 17.0.8.1 with PID 31980 (started by mitch in D:\projecten\semester6individueel\ProjectService)
-2023-11-23T23:58:30.564+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : The following 1 profile is active: "test"
-2023-11-23T23:58:30.757+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-11-23T23:58:30.757+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-23T23:58:30.773+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 2 JPA repository interfaces.
-2023-11-23T23:58:30.773+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-11-23T23:58:30.773+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-11-23T23:58:30.773+01:00  INFO 31980 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2023-11-23T23:58:30.773+01:00  INFO 31980 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IProjectRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2023-11-23T23:58:30.773+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
-2023-11-23T23:58:30.867+01:00  INFO 31980 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-11-23T23:58:30.867+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-23T23:58:30.867+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
-2023-11-23T23:58:30.914+01:00  INFO 31980 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-23T23:58:30.914+01:00  INFO 31980 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 350 ms
-2023-11-23T23:58:30.961+01:00  INFO 31980 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-23T23:58:30.980+01:00  INFO 31980 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-11-23T23:58:30.981+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2023-11-23T23:58:30.983+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:db user=SA
-2023-11-23T23:58:30.983+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2023-11-23T23:58:30.983+01:00  WARN 31980 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2023-11-23T23:58:31.000+01:00  WARN 31980 --- [           main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ProjectService.JoinTable.ProjectMembership
-2023-11-23T23:58:31.000+01:00  WARN 31980 --- [           main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ProjectService.JoinTable.ProjectMembership
-2023-11-23T23:58:31.050+01:00  INFO 31980 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-11-23T23:58:31.050+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
-2023-11-23T23:58:31.050+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
-2023-11-23T23:58:31.050+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
-2023-11-23T23:58:31.050+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
-2023-11-23T23:58:31.050+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table project (createdat timestamp(6) not null, id bigint generated by default as identity, lastupdatedat timestamp(6) not null, owner_id bigint, projectname varchar(20) not null, projectdescription varchar(50) not null, primary key (id))
-2023-11-23T23:58:31.061+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectmember (id bigint not null, email varchar(255) unique, primary key (id))
-2023-11-23T23:58:31.061+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectmembership (joinedproject_id bigint not null, member_id bigint not null, role_id bigint not null, primary key (joinedproject_id, member_id, role_id))
-2023-11-23T23:58:31.061+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectrole (id bigint generated by default as identity, name varchar(255) unique, primary key (id))
-2023-11-23T23:58:31.061+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists project add constraint FKgela6raf25bsa6thxog5x8lkv foreign key (owner_id) references projectmember
-2023-11-23T23:58:31.061+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKr5hoxnh9k5nutty4hon93c6fe foreign key (joinedproject_id) references project
-2023-11-23T23:58:31.061+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKt45jjcbtrrsgom05jwu0fje4b foreign key (member_id) references projectmember
-2023-11-23T23:58:31.061+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKfnovlarbluovef58uneoi1li1 foreign key (role_id) references projectrole
-2023-11-23T23:58:31.061+01:00  INFO 31980 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-23T23:58:31.171+01:00  WARN 31980 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-23T23:58:31.300+01:00  INFO 31980 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
-2023-11-23T23:58:31.300+01:00  INFO 31980 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-11-23T23:58:31.300+01:00  INFO 31980 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2023-11-23T23:58:31.316+01:00  INFO 31980 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63105 (http) with context path ''
-2023-11-23T23:58:31.316+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : Started ProjectControllerTests in 0.784 seconds (process running for 9.104)
-2023-11-23T23:58:31.535+01:00  WARN 31980 --- [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.util.List<com.example.ProjectService.Project.dtos.ProjectDto>> com.example.ProjectService.Project.ProjectController.GetAllProjectsFromOwner(com.example.ProjectService.Project.dtos.ProjectMemberDto)]
+2023-11-24T00:06:04.354+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : Starting ProjectControllerTests using Java 17.0.8.1 with PID 12200 (started by mitch in D:\projecten\semester6individueel\ProjectService)
+2023-11-24T00:06:04.354+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : The following 1 profile is active: "test"
+2023-11-24T00:06:04.537+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-24T00:06:04.537+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-24T00:06:04.553+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+2023-11-24T00:06:04.558+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-24T00:06:04.558+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-24T00:06:04.562+01:00  INFO 12200 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-24T00:06:04.563+01:00  INFO 12200 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IProjectRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-24T00:06:04.563+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2023-11-24T00:06:04.665+01:00  INFO 12200 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-11-24T00:06:04.666+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-24T00:06:04.666+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-24T00:06:04.702+01:00  INFO 12200 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-24T00:06:04.702+01:00  INFO 12200 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 345 ms
+2023-11-24T00:06:04.729+01:00  INFO 12200 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-24T00:06:04.736+01:00  INFO 12200 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-24T00:06:04.737+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-11-24T00:06:04.738+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:db user=SA
+2023-11-24T00:06:04.738+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-11-24T00:06:04.738+01:00  WARN 12200 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-24T00:06:04.752+01:00  WARN 12200 --- [           main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ProjectService.JoinTable.ProjectMembership
+2023-11-24T00:06:04.752+01:00  WARN 12200 --- [           main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ProjectService.JoinTable.ProjectMembership
+2023-11-24T00:06:04.796+01:00  INFO 12200 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-24T00:06:04.796+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
+2023-11-24T00:06:04.797+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
+2023-11-24T00:06:04.797+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
+2023-11-24T00:06:04.797+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
+2023-11-24T00:06:04.797+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table project (createdat timestamp(6) not null, id bigint generated by default as identity, lastupdatedat timestamp(6) not null, owner_id bigint, projectname varchar(20) not null, projectdescription varchar(50) not null, primary key (id))
+2023-11-24T00:06:04.799+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectmember (id bigint not null, email varchar(255) unique, primary key (id))
+2023-11-24T00:06:04.800+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectmembership (joinedproject_id bigint not null, member_id bigint not null, role_id bigint not null, primary key (joinedproject_id, member_id, role_id))
+2023-11-24T00:06:04.801+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectrole (id bigint generated by default as identity, name varchar(255) unique, primary key (id))
+2023-11-24T00:06:04.801+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists project add constraint FKgela6raf25bsa6thxog5x8lkv foreign key (owner_id) references projectmember
+2023-11-24T00:06:04.802+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKr5hoxnh9k5nutty4hon93c6fe foreign key (joinedproject_id) references project
+2023-11-24T00:06:04.803+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKt45jjcbtrrsgom05jwu0fje4b foreign key (member_id) references projectmember
+2023-11-24T00:06:04.804+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKfnovlarbluovef58uneoi1li1 foreign key (role_id) references projectrole
+2023-11-24T00:06:04.805+01:00  INFO 12200 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-24T00:06:04.887+01:00  WARN 12200 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-24T00:06:05.067+01:00  INFO 12200 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2023-11-24T00:06:05.067+01:00  INFO 12200 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-11-24T00:06:05.068+01:00  INFO 12200 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-11-24T00:06:05.085+01:00  INFO 12200 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 49358 (http) with context path ''
+2023-11-24T00:06:05.089+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : Started ProjectControllerTests in 0.76 seconds (process running for 8.892)
+2023-11-24T00:06:05.320+01:00  WARN 12200 --- [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.util.List<com.example.ProjectService.Project.dtos.ProjectDto>> com.example.ProjectService.Project.ProjectController.GetAllProjectsFromOwner(com.example.ProjectService.Project.dtos.ProjectMemberDto)]
 ]]></system-out>
   </testcase>
-  <testcase name="shouldNotCreateProjectAndThrowConflicted" classname="com.example.ProjectService.ProjectControllerTests" time="1.075">
-    <system-out><![CDATA[2023-11-23T23:58:31.567+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-11-23T23:58:31.582+01:00  INFO 31980 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-23T23:58:31.582+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
-2023-11-23T23:58:31.582+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
-2023-11-23T23:58:31.582+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
-2023-11-23T23:58:31.582+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
-2023-11-23T23:58:31.582+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2023-11-23T23:58:31.582+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+  <testcase name="shouldNotCreateProjectAndThrowConflicted" classname="com.example.ProjectService.ProjectControllerTests" time="0.982">
+    <system-out><![CDATA[2023-11-24T00:06:05.352+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-24T00:06:05.357+01:00  INFO 12200 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-24T00:06:05.358+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
+2023-11-24T00:06:05.359+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
+2023-11-24T00:06:05.360+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
+2023-11-24T00:06:05.361+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
+2023-11-24T00:06:05.361+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-11-24T00:06:05.362+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -204,56 +204,56 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.5)
 
-2023-11-23T23:58:31.614+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : Starting ProjectControllerTests using Java 17.0.8.1 with PID 31980 (started by mitch in D:\projecten\semester6individueel\ProjectService)
-2023-11-23T23:58:31.614+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : The following 1 profile is active: "test"
-2023-11-23T23:58:31.786+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-11-23T23:58:31.786+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-23T23:58:31.802+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 2 JPA repository interfaces.
-2023-11-23T23:58:31.802+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-11-23T23:58:31.802+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-11-23T23:58:31.818+01:00  INFO 31980 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2023-11-23T23:58:31.818+01:00  INFO 31980 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IProjectRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2023-11-23T23:58:31.818+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-2023-11-23T23:58:31.896+01:00  INFO 31980 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-11-23T23:58:31.901+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-23T23:58:31.901+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
-2023-11-23T23:58:31.928+01:00  INFO 31980 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-23T23:58:31.928+01:00  INFO 31980 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 314 ms
-2023-11-23T23:58:31.975+01:00  INFO 31980 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-23T23:58:31.975+01:00  INFO 31980 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-11-23T23:58:31.975+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2023-11-23T23:58:31.975+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:db user=SA
-2023-11-23T23:58:31.990+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2023-11-23T23:58:31.990+01:00  WARN 31980 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2023-11-23T23:58:32.006+01:00  WARN 31980 --- [           main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ProjectService.JoinTable.ProjectMembership
-2023-11-23T23:58:32.006+01:00  WARN 31980 --- [           main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ProjectService.JoinTable.ProjectMembership
-2023-11-23T23:58:32.053+01:00  INFO 31980 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-11-23T23:58:32.053+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
-2023-11-23T23:58:32.053+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
-2023-11-23T23:58:32.053+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
-2023-11-23T23:58:32.053+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
-2023-11-23T23:58:32.053+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table project (createdat timestamp(6) not null, id bigint generated by default as identity, lastupdatedat timestamp(6) not null, owner_id bigint, projectname varchar(20) not null, projectdescription varchar(50) not null, primary key (id))
-2023-11-23T23:58:32.053+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectmember (id bigint not null, email varchar(255) unique, primary key (id))
-2023-11-23T23:58:32.053+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectmembership (joinedproject_id bigint not null, member_id bigint not null, role_id bigint not null, primary key (joinedproject_id, member_id, role_id))
-2023-11-23T23:58:32.069+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectrole (id bigint generated by default as identity, name varchar(255) unique, primary key (id))
-2023-11-23T23:58:32.069+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists project add constraint FKgela6raf25bsa6thxog5x8lkv foreign key (owner_id) references projectmember
-2023-11-23T23:58:32.069+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKr5hoxnh9k5nutty4hon93c6fe foreign key (joinedproject_id) references project
-2023-11-23T23:58:32.069+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKt45jjcbtrrsgom05jwu0fje4b foreign key (member_id) references projectmember
-2023-11-23T23:58:32.069+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKfnovlarbluovef58uneoi1li1 foreign key (role_id) references projectrole
-2023-11-23T23:58:32.069+01:00  INFO 31980 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-23T23:58:32.148+01:00  WARN 31980 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-23T23:58:32.313+01:00  INFO 31980 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
-2023-11-23T23:58:32.313+01:00  INFO 31980 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-11-23T23:58:32.313+01:00  INFO 31980 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2023-11-23T23:58:32.328+01:00  INFO 31980 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63113 (http) with context path ''
-2023-11-23T23:58:32.328+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : Started ProjectControllerTests in 0.743 seconds (process running for 10.114)
-2023-11-23T23:58:32.516+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : select p1_0.id,p1_0.email from projectmember p1_0 where p1_0.id=?
-2023-11-23T23:58:32.563+01:00  INFO 31980 --- [           main] c.e.P.Project.ProjectService             : new project dto => Project{Id=null, Projectname='thisnameiswaytolongforaprojectandsonotallowed', Projectdescription='description16666', Createdat=Thu Nov 23 23:58:32 CET 2023, Lastupdatedat=Thu Nov 23 23:58:32 CET 2023, Owner=ProjectMember{Id=140, Email='testuser140@gmail.com'}, Memberships=[]}
-2023-11-23T23:58:32.595+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : insert into project (createdat,lastupdatedat,owner_id,projectdescription,projectname,id) values (?,?,?,?,?,default)
-2023-11-23T23:58:32.602+01:00  WARN 31980 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 22001, SQLState: 22001
-2023-11-23T23:58:32.602+01:00 ERROR 31980 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Value too long for column "projectname CHARACTER VARYING(20)": "'thisnameiswaytolongforaprojectandsonotallowed' (45)"; SQL statement:
+2023-11-24T00:06:05.386+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : Starting ProjectControllerTests using Java 17.0.8.1 with PID 12200 (started by mitch in D:\projecten\semester6individueel\ProjectService)
+2023-11-24T00:06:05.386+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : The following 1 profile is active: "test"
+2023-11-24T00:06:05.559+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-24T00:06:05.559+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-24T00:06:05.574+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 2 JPA repository interfaces.
+2023-11-24T00:06:05.577+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-24T00:06:05.577+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-24T00:06:05.581+01:00  INFO 12200 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-24T00:06:05.583+01:00  INFO 12200 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IProjectRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-24T00:06:05.583+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2023-11-24T00:06:05.673+01:00  INFO 12200 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-11-24T00:06:05.674+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-24T00:06:05.675+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-24T00:06:05.721+01:00  INFO 12200 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-24T00:06:05.721+01:00  INFO 12200 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 333 ms
+2023-11-24T00:06:05.757+01:00  INFO 12200 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-24T00:06:05.766+01:00  INFO 12200 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-24T00:06:05.767+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-11-24T00:06:05.769+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:db user=SA
+2023-11-24T00:06:05.769+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-11-24T00:06:05.770+01:00  WARN 12200 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-24T00:06:05.787+01:00  WARN 12200 --- [           main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ProjectService.JoinTable.ProjectMembership
+2023-11-24T00:06:05.787+01:00  WARN 12200 --- [           main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ProjectService.JoinTable.ProjectMembership
+2023-11-24T00:06:05.842+01:00  INFO 12200 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-24T00:06:05.843+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
+2023-11-24T00:06:05.843+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
+2023-11-24T00:06:05.843+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
+2023-11-24T00:06:05.843+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
+2023-11-24T00:06:05.843+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table project (createdat timestamp(6) not null, id bigint generated by default as identity, lastupdatedat timestamp(6) not null, owner_id bigint, projectname varchar(20) not null, projectdescription varchar(50) not null, primary key (id))
+2023-11-24T00:06:05.844+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectmember (id bigint not null, email varchar(255) unique, primary key (id))
+2023-11-24T00:06:05.845+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectmembership (joinedproject_id bigint not null, member_id bigint not null, role_id bigint not null, primary key (joinedproject_id, member_id, role_id))
+2023-11-24T00:06:05.846+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectrole (id bigint generated by default as identity, name varchar(255) unique, primary key (id))
+2023-11-24T00:06:05.847+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists project add constraint FKgela6raf25bsa6thxog5x8lkv foreign key (owner_id) references projectmember
+2023-11-24T00:06:05.848+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKr5hoxnh9k5nutty4hon93c6fe foreign key (joinedproject_id) references project
+2023-11-24T00:06:05.849+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKt45jjcbtrrsgom05jwu0fje4b foreign key (member_id) references projectmember
+2023-11-24T00:06:05.849+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKfnovlarbluovef58uneoi1li1 foreign key (role_id) references projectrole
+2023-11-24T00:06:05.851+01:00  INFO 12200 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-24T00:06:05.925+01:00  WARN 12200 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-24T00:06:06.064+01:00  INFO 12200 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2023-11-24T00:06:06.064+01:00  INFO 12200 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-11-24T00:06:06.065+01:00  INFO 12200 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-11-24T00:06:06.083+01:00  INFO 12200 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 49361 (http) with context path ''
+2023-11-24T00:06:06.087+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : Started ProjectControllerTests in 0.722 seconds (process running for 9.89)
+2023-11-24T00:06:06.236+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : select p1_0.id,p1_0.email from projectmember p1_0 where p1_0.id=?
+2023-11-24T00:06:06.264+01:00  INFO 12200 --- [           main] c.e.P.Project.ProjectService             : new project dto => Project{Id=null, Projectname='thisnameiswaytolongforaprojectandsonotallowed', Projectdescription='description16666', Createdat=Fri Nov 24 00:06:06 CET 2023, Lastupdatedat=Fri Nov 24 00:06:06 CET 2023, Owner=ProjectMember{Id=140, Email='testuser140@gmail.com'}, Memberships=[]}
+2023-11-24T00:06:06.284+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : insert into project (createdat,lastupdatedat,owner_id,projectdescription,projectname,id) values (?,?,?,?,?,default)
+2023-11-24T00:06:06.290+01:00  WARN 12200 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 22001, SQLState: 22001
+2023-11-24T00:06:06.290+01:00 ERROR 12200 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Value too long for column "projectname CHARACTER VARYING(20)": "'thisnameiswaytolongforaprojectandsonotallowed' (45)"; SQL statement:
 insert into project (createdat,lastupdatedat,owner_id,projectdescription,projectname,id) values (?,?,?,?,?,default) [22001-214]
-2023-11-23T23:58:32.602+01:00 ERROR 31980 --- [           main] c.e.P.Project.ProjectController          : Error creating project
+2023-11-24T00:06:06.296+01:00 ERROR 12200 --- [           main] c.e.P.Project.ProjectController          : Error creating project
 
 org.springframework.dao.DataIntegrityViolationException: could not execute statement [Value too long for column "projectname CHARACTER VARYING(20)": "'thisnameiswaytolongforaprojectandsonotallowed' (45)"; SQL statement:
 insert into project (createdat,lastupdatedat,owner_id,projectdescription,projectname,id) values (?,?,?,?,?,default) [22001-214]] [insert into project (createdat,lastupdatedat,owner_id,projectdescription,projectname,id) values (?,?,?,?,?,default)]; SQL [insert into project (createdat,lastupdatedat,owner_id,projectdescription,projectname,id) values (?,?,?,?,?,default)]
@@ -469,15 +469,15 @@ insert into project (createdat,lastupdatedat,owner_id,projectdescription,project
 
 ]]></system-out>
   </testcase>
-  <testcase name="shouldNotCreateProject" classname="com.example.ProjectService.ProjectControllerTests" time="0.643">
-    <system-out><![CDATA[2023-11-23T23:58:32.626+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-11-23T23:58:32.645+01:00  INFO 31980 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-23T23:58:32.645+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
-2023-11-23T23:58:32.645+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
-2023-11-23T23:58:32.645+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
-2023-11-23T23:58:32.645+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
-2023-11-23T23:58:32.645+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2023-11-23T23:58:32.645+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+  <testcase name="shouldNotCreateProject" classname="com.example.ProjectService.ProjectControllerTests" time="0.663">
+    <system-out><![CDATA[2023-11-24T00:06:06.333+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-24T00:06:06.355+01:00  INFO 12200 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-24T00:06:06.355+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
+2023-11-24T00:06:06.356+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
+2023-11-24T00:06:06.357+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
+2023-11-24T00:06:06.357+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
+2023-11-24T00:06:06.358+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-11-24T00:06:06.359+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -487,61 +487,61 @@ insert into project (createdat,lastupdatedat,owner_id,projectdescription,project
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.5)
 
-2023-11-23T23:58:32.676+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : Starting ProjectControllerTests using Java 17.0.8.1 with PID 31980 (started by mitch in D:\projecten\semester6individueel\ProjectService)
-2023-11-23T23:58:32.676+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : The following 1 profile is active: "test"
-2023-11-23T23:58:32.819+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-11-23T23:58:32.819+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-23T23:58:32.830+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 2 JPA repository interfaces.
-2023-11-23T23:58:32.830+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-11-23T23:58:32.830+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-11-23T23:58:32.845+01:00  INFO 31980 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2023-11-23T23:58:32.845+01:00  INFO 31980 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IProjectRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2023-11-23T23:58:32.845+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
-2023-11-23T23:58:32.924+01:00  INFO 31980 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-11-23T23:58:32.924+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-23T23:58:32.924+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
-2023-11-23T23:58:32.971+01:00  INFO 31980 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-23T23:58:32.971+01:00  INFO 31980 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 295 ms
-2023-11-23T23:58:33.002+01:00  INFO 31980 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-23T23:58:33.018+01:00  INFO 31980 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-11-23T23:58:33.018+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
-2023-11-23T23:58:33.018+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn30: url=jdbc:h2:mem:db user=SA
-2023-11-23T23:58:33.018+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
-2023-11-23T23:58:33.018+01:00  WARN 31980 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2023-11-23T23:58:33.018+01:00  WARN 31980 --- [           main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ProjectService.JoinTable.ProjectMembership
-2023-11-23T23:58:33.018+01:00  WARN 31980 --- [           main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ProjectService.JoinTable.ProjectMembership
-2023-11-23T23:58:33.065+01:00  INFO 31980 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-11-23T23:58:33.065+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
-2023-11-23T23:58:33.065+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
-2023-11-23T23:58:33.065+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
-2023-11-23T23:58:33.065+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
-2023-11-23T23:58:33.065+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table project (createdat timestamp(6) not null, id bigint generated by default as identity, lastupdatedat timestamp(6) not null, owner_id bigint, projectname varchar(20) not null, projectdescription varchar(50) not null, primary key (id))
-2023-11-23T23:58:33.065+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectmember (id bigint not null, email varchar(255) unique, primary key (id))
-2023-11-23T23:58:33.065+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectmembership (joinedproject_id bigint not null, member_id bigint not null, role_id bigint not null, primary key (joinedproject_id, member_id, role_id))
-2023-11-23T23:58:33.065+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectrole (id bigint generated by default as identity, name varchar(255) unique, primary key (id))
-2023-11-23T23:58:33.080+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists project add constraint FKgela6raf25bsa6thxog5x8lkv foreign key (owner_id) references projectmember
-2023-11-23T23:58:33.080+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKr5hoxnh9k5nutty4hon93c6fe foreign key (joinedproject_id) references project
-2023-11-23T23:58:33.080+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKt45jjcbtrrsgom05jwu0fje4b foreign key (member_id) references projectmember
-2023-11-23T23:58:33.080+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKfnovlarbluovef58uneoi1li1 foreign key (role_id) references projectrole
-2023-11-23T23:58:33.080+01:00  INFO 31980 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-23T23:58:33.143+01:00  WARN 31980 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-23T23:58:33.242+01:00  INFO 31980 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
-2023-11-23T23:58:33.242+01:00  INFO 31980 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-11-23T23:58:33.242+01:00  INFO 31980 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2023-11-23T23:58:33.253+01:00  INFO 31980 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63121 (http) with context path ''
-2023-11-23T23:58:33.253+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : Started ProjectControllerTests in 0.608 seconds (process running for 11.047)
-2023-11-23T23:58:33.269+01:00  WARN 31980 --- [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.String> com.example.ProjectService.Project.ProjectController.CreateProject(com.example.ProjectService.Project.dtos.ProjectDto)]
+2023-11-24T00:06:06.390+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : Starting ProjectControllerTests using Java 17.0.8.1 with PID 12200 (started by mitch in D:\projecten\semester6individueel\ProjectService)
+2023-11-24T00:06:06.390+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : The following 1 profile is active: "test"
+2023-11-24T00:06:06.543+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-24T00:06:06.544+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-24T00:06:06.557+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 2 JPA repository interfaces.
+2023-11-24T00:06:06.561+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-24T00:06:06.561+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-24T00:06:06.565+01:00  INFO 12200 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-24T00:06:06.566+01:00  INFO 12200 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IProjectRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-24T00:06:06.566+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2023-11-24T00:06:06.638+01:00  INFO 12200 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-11-24T00:06:06.639+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-24T00:06:06.639+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-24T00:06:06.676+01:00  INFO 12200 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-24T00:06:06.676+01:00  INFO 12200 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 283 ms
+2023-11-24T00:06:06.702+01:00  INFO 12200 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-24T00:06:06.708+01:00  INFO 12200 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-24T00:06:06.709+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-11-24T00:06:06.710+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn30: url=jdbc:h2:mem:db user=SA
+2023-11-24T00:06:06.710+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-11-24T00:06:06.710+01:00  WARN 12200 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-24T00:06:06.726+01:00  WARN 12200 --- [           main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ProjectService.JoinTable.ProjectMembership
+2023-11-24T00:06:06.726+01:00  WARN 12200 --- [           main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ProjectService.JoinTable.ProjectMembership
+2023-11-24T00:06:06.774+01:00  INFO 12200 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-24T00:06:06.774+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
+2023-11-24T00:06:06.774+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
+2023-11-24T00:06:06.774+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
+2023-11-24T00:06:06.775+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
+2023-11-24T00:06:06.775+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table project (createdat timestamp(6) not null, id bigint generated by default as identity, lastupdatedat timestamp(6) not null, owner_id bigint, projectname varchar(20) not null, projectdescription varchar(50) not null, primary key (id))
+2023-11-24T00:06:06.776+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectmember (id bigint not null, email varchar(255) unique, primary key (id))
+2023-11-24T00:06:06.777+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectmembership (joinedproject_id bigint not null, member_id bigint not null, role_id bigint not null, primary key (joinedproject_id, member_id, role_id))
+2023-11-24T00:06:06.777+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectrole (id bigint generated by default as identity, name varchar(255) unique, primary key (id))
+2023-11-24T00:06:06.778+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists project add constraint FKgela6raf25bsa6thxog5x8lkv foreign key (owner_id) references projectmember
+2023-11-24T00:06:06.779+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKr5hoxnh9k5nutty4hon93c6fe foreign key (joinedproject_id) references project
+2023-11-24T00:06:06.780+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKt45jjcbtrrsgom05jwu0fje4b foreign key (member_id) references projectmember
+2023-11-24T00:06:06.780+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKfnovlarbluovef58uneoi1li1 foreign key (role_id) references projectrole
+2023-11-24T00:06:06.782+01:00  INFO 12200 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-24T00:06:06.831+01:00  WARN 12200 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-24T00:06:06.950+01:00  INFO 12200 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2023-11-24T00:06:06.950+01:00  INFO 12200 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-11-24T00:06:06.951+01:00  INFO 12200 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-11-24T00:06:06.962+01:00  INFO 12200 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 49364 (http) with context path ''
+2023-11-24T00:06:06.969+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : Started ProjectControllerTests in 0.608 seconds (process running for 10.772)
+2023-11-24T00:06:06.983+01:00  WARN 12200 --- [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.String> com.example.ProjectService.Project.ProjectController.CreateProject(com.example.ProjectService.Project.dtos.ProjectDto)]
 ]]></system-out>
   </testcase>
-  <testcase name="shouldCreateProject" classname="com.example.ProjectService.ProjectControllerTests" time="0.634">
-    <system-out><![CDATA[2023-11-23T23:58:33.284+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-11-23T23:58:33.303+01:00  INFO 31980 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-23T23:58:33.303+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
-2023-11-23T23:58:33.303+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
-2023-11-23T23:58:33.303+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
-2023-11-23T23:58:33.303+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
-2023-11-23T23:58:33.303+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
-2023-11-23T23:58:33.303+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+  <testcase name="shouldCreateProject" classname="com.example.ProjectService.ProjectControllerTests" time="0.656">
+    <system-out><![CDATA[2023-11-24T00:06:07.002+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-24T00:06:07.010+01:00  INFO 12200 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-24T00:06:07.010+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
+2023-11-24T00:06:07.011+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
+2023-11-24T00:06:07.012+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
+2023-11-24T00:06:07.012+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
+2023-11-24T00:06:07.013+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-11-24T00:06:07.014+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -551,64 +551,64 @@ insert into project (createdat,lastupdatedat,owner_id,projectdescription,project
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.5)
 
-2023-11-23T23:58:33.316+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : Starting ProjectControllerTests using Java 17.0.8.1 with PID 31980 (started by mitch in D:\projecten\semester6individueel\ProjectService)
-2023-11-23T23:58:33.316+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : The following 1 profile is active: "test"
-2023-11-23T23:58:33.441+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-11-23T23:58:33.441+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-23T23:58:33.457+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 2 JPA repository interfaces.
-2023-11-23T23:58:33.457+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-11-23T23:58:33.457+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-11-23T23:58:33.457+01:00  INFO 31980 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2023-11-23T23:58:33.457+01:00  INFO 31980 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IProjectRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2023-11-23T23:58:33.457+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
-2023-11-23T23:58:33.504+01:00  INFO 31980 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-11-23T23:58:33.504+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-23T23:58:33.504+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
-2023-11-23T23:58:33.551+01:00  INFO 31980 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-23T23:58:33.551+01:00  INFO 31980 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 235 ms
-2023-11-23T23:58:33.567+01:00  INFO 31980 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-23T23:58:33.567+01:00  INFO 31980 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-11-23T23:58:33.567+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
-2023-11-23T23:58:33.567+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection conn40: url=jdbc:h2:mem:db user=SA
-2023-11-23T23:58:33.567+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
-2023-11-23T23:58:33.567+01:00  WARN 31980 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2023-11-23T23:58:33.583+01:00  WARN 31980 --- [           main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ProjectService.JoinTable.ProjectMembership
-2023-11-23T23:58:33.583+01:00  WARN 31980 --- [           main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ProjectService.JoinTable.ProjectMembership
-2023-11-23T23:58:33.614+01:00  INFO 31980 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-11-23T23:58:33.614+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
-2023-11-23T23:58:33.614+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
-2023-11-23T23:58:33.614+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
-2023-11-23T23:58:33.614+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
-2023-11-23T23:58:33.614+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table project (createdat timestamp(6) not null, id bigint generated by default as identity, lastupdatedat timestamp(6) not null, owner_id bigint, projectname varchar(20) not null, projectdescription varchar(50) not null, primary key (id))
-2023-11-23T23:58:33.614+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectmember (id bigint not null, email varchar(255) unique, primary key (id))
-2023-11-23T23:58:33.614+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectmembership (joinedproject_id bigint not null, member_id bigint not null, role_id bigint not null, primary key (joinedproject_id, member_id, role_id))
-2023-11-23T23:58:33.614+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectrole (id bigint generated by default as identity, name varchar(255) unique, primary key (id))
-2023-11-23T23:58:33.614+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists project add constraint FKgela6raf25bsa6thxog5x8lkv foreign key (owner_id) references projectmember
-2023-11-23T23:58:33.614+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKr5hoxnh9k5nutty4hon93c6fe foreign key (joinedproject_id) references project
-2023-11-23T23:58:33.614+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKt45jjcbtrrsgom05jwu0fje4b foreign key (member_id) references projectmember
-2023-11-23T23:58:33.614+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKfnovlarbluovef58uneoi1li1 foreign key (role_id) references projectrole
-2023-11-23T23:58:33.614+01:00  INFO 31980 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-23T23:58:33.661+01:00  WARN 31980 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-23T23:58:33.755+01:00  INFO 31980 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
-2023-11-23T23:58:33.755+01:00  INFO 31980 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-11-23T23:58:33.755+01:00  INFO 31980 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2023-11-23T23:58:33.771+01:00  INFO 31980 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63126 (http) with context path ''
-2023-11-23T23:58:33.771+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : Started ProjectControllerTests in 0.473 seconds (process running for 11.561)
-2023-11-23T23:58:33.787+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : select p1_0.id,p1_0.email from projectmember p1_0 where p1_0.id=?
-2023-11-23T23:58:33.787+01:00  INFO 31980 --- [           main] c.e.P.Project.ProjectService             : new project dto => Project{Id=null, Projectname='project66', Projectdescription='description1', Createdat=Thu Nov 23 23:58:33 CET 2023, Lastupdatedat=Thu Nov 23 23:58:33 CET 2023, Owner=ProjectMember{Id=140, Email='testuser140@gmail.com'}, Memberships=[]}
-2023-11-23T23:58:33.787+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : insert into project (createdat,lastupdatedat,owner_id,projectdescription,projectname,id) values (?,?,?,?,?,default)
-2023-11-23T23:58:33.869+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : SELECT * FROM `project` ORDER BY `id` DESC LIMIT 1
+2023-11-24T00:06:07.040+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : Starting ProjectControllerTests using Java 17.0.8.1 with PID 12200 (started by mitch in D:\projecten\semester6individueel\ProjectService)
+2023-11-24T00:06:07.041+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : The following 1 profile is active: "test"
+2023-11-24T00:06:07.154+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-24T00:06:07.154+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-24T00:06:07.164+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 2 JPA repository interfaces.
+2023-11-24T00:06:07.166+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-24T00:06:07.166+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-24T00:06:07.169+01:00  INFO 12200 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-24T00:06:07.169+01:00  INFO 12200 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IProjectRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-24T00:06:07.169+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2023-11-24T00:06:07.211+01:00  INFO 12200 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-11-24T00:06:07.212+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-24T00:06:07.212+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-24T00:06:07.245+01:00  INFO 12200 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-24T00:06:07.246+01:00  INFO 12200 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 203 ms
+2023-11-24T00:06:07.266+01:00  INFO 12200 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-24T00:06:07.272+01:00  INFO 12200 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-24T00:06:07.272+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2023-11-24T00:06:07.274+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection conn40: url=jdbc:h2:mem:db user=SA
+2023-11-24T00:06:07.277+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2023-11-24T00:06:07.277+01:00  WARN 12200 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-24T00:06:07.290+01:00  WARN 12200 --- [           main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ProjectService.JoinTable.ProjectMembership
+2023-11-24T00:06:07.291+01:00  WARN 12200 --- [           main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ProjectService.JoinTable.ProjectMembership
+2023-11-24T00:06:07.330+01:00  INFO 12200 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-24T00:06:07.330+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
+2023-11-24T00:06:07.331+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
+2023-11-24T00:06:07.331+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
+2023-11-24T00:06:07.331+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
+2023-11-24T00:06:07.331+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table project (createdat timestamp(6) not null, id bigint generated by default as identity, lastupdatedat timestamp(6) not null, owner_id bigint, projectname varchar(20) not null, projectdescription varchar(50) not null, primary key (id))
+2023-11-24T00:06:07.332+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectmember (id bigint not null, email varchar(255) unique, primary key (id))
+2023-11-24T00:06:07.333+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectmembership (joinedproject_id bigint not null, member_id bigint not null, role_id bigint not null, primary key (joinedproject_id, member_id, role_id))
+2023-11-24T00:06:07.334+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectrole (id bigint generated by default as identity, name varchar(255) unique, primary key (id))
+2023-11-24T00:06:07.334+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists project add constraint FKgela6raf25bsa6thxog5x8lkv foreign key (owner_id) references projectmember
+2023-11-24T00:06:07.335+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKr5hoxnh9k5nutty4hon93c6fe foreign key (joinedproject_id) references project
+2023-11-24T00:06:07.336+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKt45jjcbtrrsgom05jwu0fje4b foreign key (member_id) references projectmember
+2023-11-24T00:06:07.337+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKfnovlarbluovef58uneoi1li1 foreign key (role_id) references projectrole
+2023-11-24T00:06:07.338+01:00  INFO 12200 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-24T00:06:07.379+01:00  WARN 12200 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-24T00:06:07.464+01:00  INFO 12200 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2023-11-24T00:06:07.464+01:00  INFO 12200 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-11-24T00:06:07.464+01:00  INFO 12200 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-11-24T00:06:07.475+01:00  INFO 12200 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 49367 (http) with context path ''
+2023-11-24T00:06:07.477+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : Started ProjectControllerTests in 0.46 seconds (process running for 11.28)
+2023-11-24T00:06:07.490+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : select p1_0.id,p1_0.email from projectmember p1_0 where p1_0.id=?
+2023-11-24T00:06:07.492+01:00  INFO 12200 --- [           main] c.e.P.Project.ProjectService             : new project dto => Project{Id=null, Projectname='project66', Projectdescription='description1', Createdat=Fri Nov 24 00:06:07 CET 2023, Lastupdatedat=Fri Nov 24 00:06:07 CET 2023, Owner=ProjectMember{Id=140, Email='testuser140@gmail.com'}, Memberships=[]}
+2023-11-24T00:06:07.493+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : insert into project (createdat,lastupdatedat,owner_id,projectdescription,projectname,id) values (?,?,?,?,?,default)
+2023-11-24T00:06:07.604+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : SELECT * FROM `project` ORDER BY `id` DESC LIMIT 1
 ]]></system-out>
   </testcase>
-  <testcase name="shouldGetNoProjectsFromAccount" classname="com.example.ProjectService.ProjectControllerTests" time="1.012">
-    <system-out><![CDATA[2023-11-23T23:58:33.917+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-11-23T23:58:33.917+01:00  INFO 31980 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-23T23:58:33.917+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
-2023-11-23T23:58:33.917+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
-2023-11-23T23:58:33.917+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
-2023-11-23T23:58:33.917+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
-2023-11-23T23:58:33.917+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
-2023-11-23T23:58:33.917+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+  <testcase name="shouldGetNoProjectsFromAccount" classname="com.example.ProjectService.ProjectControllerTests" time="0.9">
+    <system-out><![CDATA[2023-11-24T00:06:07.653+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-24T00:06:07.657+01:00  INFO 12200 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-24T00:06:07.657+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
+2023-11-24T00:06:07.658+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
+2023-11-24T00:06:07.658+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
+2023-11-24T00:06:07.658+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
+2023-11-24T00:06:07.659+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2023-11-24T00:06:07.659+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -618,62 +618,62 @@ insert into project (createdat,lastupdatedat,owner_id,projectdescription,project
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.5)
 
-2023-11-23T23:58:33.932+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : Starting ProjectControllerTests using Java 17.0.8.1 with PID 31980 (started by mitch in D:\projecten\semester6individueel\ProjectService)
-2023-11-23T23:58:33.932+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : The following 1 profile is active: "test"
-2023-11-23T23:58:34.058+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-11-23T23:58:34.058+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-23T23:58:34.058+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 2 JPA repository interfaces.
-2023-11-23T23:58:34.073+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-11-23T23:58:34.073+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-11-23T23:58:34.073+01:00  INFO 31980 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2023-11-23T23:58:34.073+01:00  INFO 31980 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IProjectRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2023-11-23T23:58:34.073+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
-2023-11-23T23:58:34.121+01:00  INFO 31980 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-11-23T23:58:34.121+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-23T23:58:34.121+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
-2023-11-23T23:58:34.167+01:00  INFO 31980 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-23T23:58:34.167+01:00  INFO 31980 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 235 ms
-2023-11-23T23:58:34.199+01:00  INFO 31980 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-23T23:58:34.204+01:00  INFO 31980 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-11-23T23:58:34.204+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
-2023-11-23T23:58:34.204+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection conn50: url=jdbc:h2:mem:db user=SA
-2023-11-23T23:58:34.204+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
-2023-11-23T23:58:34.204+01:00  WARN 31980 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2023-11-23T23:58:34.215+01:00  WARN 31980 --- [           main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ProjectService.JoinTable.ProjectMembership
-2023-11-23T23:58:34.215+01:00  WARN 31980 --- [           main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ProjectService.JoinTable.ProjectMembership
-2023-11-23T23:58:34.246+01:00  INFO 31980 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-11-23T23:58:34.246+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
-2023-11-23T23:58:34.246+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
-2023-11-23T23:58:34.246+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
-2023-11-23T23:58:34.246+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
-2023-11-23T23:58:34.246+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table project (createdat timestamp(6) not null, id bigint generated by default as identity, lastupdatedat timestamp(6) not null, owner_id bigint, projectname varchar(20) not null, projectdescription varchar(50) not null, primary key (id))
-2023-11-23T23:58:34.246+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectmember (id bigint not null, email varchar(255) unique, primary key (id))
-2023-11-23T23:58:34.246+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectmembership (joinedproject_id bigint not null, member_id bigint not null, role_id bigint not null, primary key (joinedproject_id, member_id, role_id))
-2023-11-23T23:58:34.246+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectrole (id bigint generated by default as identity, name varchar(255) unique, primary key (id))
-2023-11-23T23:58:34.246+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists project add constraint FKgela6raf25bsa6thxog5x8lkv foreign key (owner_id) references projectmember
-2023-11-23T23:58:34.246+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKr5hoxnh9k5nutty4hon93c6fe foreign key (joinedproject_id) references project
-2023-11-23T23:58:34.262+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKt45jjcbtrrsgom05jwu0fje4b foreign key (member_id) references projectmember
-2023-11-23T23:58:34.262+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKfnovlarbluovef58uneoi1li1 foreign key (role_id) references projectrole
-2023-11-23T23:58:34.262+01:00  INFO 31980 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-23T23:58:34.312+01:00  WARN 31980 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-23T23:58:34.409+01:00  INFO 31980 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
-2023-11-23T23:58:34.409+01:00  INFO 31980 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-11-23T23:58:34.409+01:00  INFO 31980 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2023-11-23T23:58:34.424+01:00  INFO 31980 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63132 (http) with context path ''
-2023-11-23T23:58:34.424+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : Started ProjectControllerTests in 0.507 seconds (process running for 12.216)
-2023-11-23T23:58:34.904+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : select p1_0.id,p1_0.email from projectmember p1_0 where p1_0.id=?
-2023-11-23T23:58:34.904+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : SELECT * FROM project WHERE owner_id = ?
+2023-11-24T00:06:07.675+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : Starting ProjectControllerTests using Java 17.0.8.1 with PID 12200 (started by mitch in D:\projecten\semester6individueel\ProjectService)
+2023-11-24T00:06:07.675+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : The following 1 profile is active: "test"
+2023-11-24T00:06:07.787+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-24T00:06:07.787+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-24T00:06:07.796+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 2 JPA repository interfaces.
+2023-11-24T00:06:07.799+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-24T00:06:07.799+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-24T00:06:07.803+01:00  INFO 12200 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-24T00:06:07.803+01:00  INFO 12200 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IProjectRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-24T00:06:07.803+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2023-11-24T00:06:07.858+01:00  INFO 12200 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-11-24T00:06:07.859+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-24T00:06:07.860+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-24T00:06:07.892+01:00  INFO 12200 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-24T00:06:07.892+01:00  INFO 12200 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 216 ms
+2023-11-24T00:06:07.911+01:00  INFO 12200 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-24T00:06:07.917+01:00  INFO 12200 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-24T00:06:07.918+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2023-11-24T00:06:07.919+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection conn50: url=jdbc:h2:mem:db user=SA
+2023-11-24T00:06:07.919+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2023-11-24T00:06:07.919+01:00  WARN 12200 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-24T00:06:07.930+01:00  WARN 12200 --- [           main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ProjectService.JoinTable.ProjectMembership
+2023-11-24T00:06:07.930+01:00  WARN 12200 --- [           main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ProjectService.JoinTable.ProjectMembership
+2023-11-24T00:06:07.961+01:00  INFO 12200 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-24T00:06:07.961+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
+2023-11-24T00:06:07.962+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
+2023-11-24T00:06:07.962+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
+2023-11-24T00:06:07.962+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
+2023-11-24T00:06:07.962+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table project (createdat timestamp(6) not null, id bigint generated by default as identity, lastupdatedat timestamp(6) not null, owner_id bigint, projectname varchar(20) not null, projectdescription varchar(50) not null, primary key (id))
+2023-11-24T00:06:07.963+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectmember (id bigint not null, email varchar(255) unique, primary key (id))
+2023-11-24T00:06:07.963+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectmembership (joinedproject_id bigint not null, member_id bigint not null, role_id bigint not null, primary key (joinedproject_id, member_id, role_id))
+2023-11-24T00:06:07.964+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectrole (id bigint generated by default as identity, name varchar(255) unique, primary key (id))
+2023-11-24T00:06:07.965+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists project add constraint FKgela6raf25bsa6thxog5x8lkv foreign key (owner_id) references projectmember
+2023-11-24T00:06:07.965+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKr5hoxnh9k5nutty4hon93c6fe foreign key (joinedproject_id) references project
+2023-11-24T00:06:07.966+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKt45jjcbtrrsgom05jwu0fje4b foreign key (member_id) references projectmember
+2023-11-24T00:06:07.967+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKfnovlarbluovef58uneoi1li1 foreign key (role_id) references projectrole
+2023-11-24T00:06:07.968+01:00  INFO 12200 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-24T00:06:08.013+01:00  WARN 12200 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-24T00:06:08.112+01:00  INFO 12200 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2023-11-24T00:06:08.112+01:00  INFO 12200 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-11-24T00:06:08.112+01:00  INFO 12200 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-11-24T00:06:08.121+01:00  INFO 12200 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 49369 (http) with context path ''
+2023-11-24T00:06:08.123+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : Started ProjectControllerTests in 0.462 seconds (process running for 11.926)
+2023-11-24T00:06:08.526+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : select p1_0.id,p1_0.email from projectmember p1_0 where p1_0.id=?
+2023-11-24T00:06:08.533+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : SELECT * FROM project WHERE owner_id = ?
 ]]></system-out>
   </testcase>
-  <testcase name="shouldCreateProjectWithNewUser" classname="com.example.ProjectService.ProjectControllerTests" time="0.659">
-    <system-out><![CDATA[2023-11-23T23:58:34.930+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-11-23T23:58:35.041+01:00  INFO 31980 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-23T23:58:35.041+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
-2023-11-23T23:58:35.041+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
-2023-11-23T23:58:35.041+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
-2023-11-23T23:58:35.041+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
-2023-11-23T23:58:35.041+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
-2023-11-23T23:58:35.041+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+  <testcase name="shouldCreateProjectWithNewUser" classname="com.example.ProjectService.ProjectControllerTests" time="0.59">
+    <system-out><![CDATA[2023-11-24T00:06:08.553+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-24T00:06:08.672+01:00  INFO 12200 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-24T00:06:08.672+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
+2023-11-24T00:06:08.673+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
+2023-11-24T00:06:08.673+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
+2023-11-24T00:06:08.673+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
+2023-11-24T00:06:08.674+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2023-11-24T00:06:08.674+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -683,66 +683,66 @@ insert into project (createdat,lastupdatedat,owner_id,projectdescription,project
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.5)
 
-2023-11-23T23:58:35.056+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : Starting ProjectControllerTests using Java 17.0.8.1 with PID 31980 (started by mitch in D:\projecten\semester6individueel\ProjectService)
-2023-11-23T23:58:35.056+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : The following 1 profile is active: "test"
-2023-11-23T23:58:35.146+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-11-23T23:58:35.146+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-23T23:58:35.146+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 2 JPA repository interfaces.
-2023-11-23T23:58:35.161+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-11-23T23:58:35.161+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-11-23T23:58:35.161+01:00  INFO 31980 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2023-11-23T23:58:35.161+01:00  INFO 31980 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IProjectRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2023-11-23T23:58:35.161+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
-2023-11-23T23:58:35.209+01:00  INFO 31980 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-11-23T23:58:35.209+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-23T23:58:35.209+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
-2023-11-23T23:58:35.240+01:00  INFO 31980 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-23T23:58:35.240+01:00  INFO 31980 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 184 ms
-2023-11-23T23:58:35.256+01:00  INFO 31980 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-23T23:58:35.271+01:00  INFO 31980 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-11-23T23:58:35.271+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
-2023-11-23T23:58:35.271+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection conn60: url=jdbc:h2:mem:db user=SA
-2023-11-23T23:58:35.271+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
-2023-11-23T23:58:35.271+01:00  WARN 31980 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2023-11-23T23:58:35.287+01:00  WARN 31980 --- [           main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ProjectService.JoinTable.ProjectMembership
-2023-11-23T23:58:35.287+01:00  WARN 31980 --- [           main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ProjectService.JoinTable.ProjectMembership
-2023-11-23T23:58:35.318+01:00  INFO 31980 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-11-23T23:58:35.318+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
-2023-11-23T23:58:35.318+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
-2023-11-23T23:58:35.318+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
-2023-11-23T23:58:35.318+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
-2023-11-23T23:58:35.318+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table project (createdat timestamp(6) not null, id bigint generated by default as identity, lastupdatedat timestamp(6) not null, owner_id bigint, projectname varchar(20) not null, projectdescription varchar(50) not null, primary key (id))
-2023-11-23T23:58:35.318+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectmember (id bigint not null, email varchar(255) unique, primary key (id))
-2023-11-23T23:58:35.318+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectmembership (joinedproject_id bigint not null, member_id bigint not null, role_id bigint not null, primary key (joinedproject_id, member_id, role_id))
-2023-11-23T23:58:35.318+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectrole (id bigint generated by default as identity, name varchar(255) unique, primary key (id))
-2023-11-23T23:58:35.318+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists project add constraint FKgela6raf25bsa6thxog5x8lkv foreign key (owner_id) references projectmember
-2023-11-23T23:58:35.318+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKr5hoxnh9k5nutty4hon93c6fe foreign key (joinedproject_id) references project
-2023-11-23T23:58:35.318+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKt45jjcbtrrsgom05jwu0fje4b foreign key (member_id) references projectmember
-2023-11-23T23:58:35.318+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKfnovlarbluovef58uneoi1li1 foreign key (role_id) references projectrole
-2023-11-23T23:58:35.334+01:00  INFO 31980 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-23T23:58:35.381+01:00  WARN 31980 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-23T23:58:35.505+01:00  INFO 31980 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
-2023-11-23T23:58:35.505+01:00  INFO 31980 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-11-23T23:58:35.505+01:00  INFO 31980 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2023-11-23T23:58:35.511+01:00  INFO 31980 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63142 (http) with context path ''
-2023-11-23T23:58:35.511+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : Started ProjectControllerTests in 0.473 seconds (process running for 13.301)
-2023-11-23T23:58:35.527+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : select p1_0.id,p1_0.email from projectmember p1_0 where p1_0.id=?
-2023-11-23T23:58:35.542+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : select p1_0.id,p1_0.email from projectmember p1_0 where p1_0.id=?
-2023-11-23T23:58:35.558+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : insert into projectmember (email,id) values (?,?)
-2023-11-23T23:58:35.558+01:00  INFO 31980 --- [           main] c.e.P.Project.ProjectService             : new project dto => Project{Id=null, Projectname='project666666', Projectdescription='description16666', Createdat=Thu Nov 23 23:58:35 CET 2023, Lastupdatedat=Thu Nov 23 23:58:35 CET 2023, Owner=ProjectMember{Id=144, Email='testuser144@gmail.com'}, Memberships=[]}
-2023-11-23T23:58:35.558+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : insert into project (createdat,lastupdatedat,owner_id,projectdescription,projectname,id) values (?,?,?,?,?,default)
-2023-11-23T23:58:35.558+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : SELECT * FROM `project` ORDER BY `id` DESC LIMIT 1
+2023-11-24T00:06:08.687+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : Starting ProjectControllerTests using Java 17.0.8.1 with PID 12200 (started by mitch in D:\projecten\semester6individueel\ProjectService)
+2023-11-24T00:06:08.687+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : The following 1 profile is active: "test"
+2023-11-24T00:06:08.768+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-24T00:06:08.768+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-24T00:06:08.776+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2023-11-24T00:06:08.778+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-24T00:06:08.779+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-24T00:06:08.782+01:00  INFO 12200 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-24T00:06:08.782+01:00  INFO 12200 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IProjectRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-24T00:06:08.782+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2023-11-24T00:06:08.828+01:00  INFO 12200 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-11-24T00:06:08.829+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-24T00:06:08.829+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-24T00:06:08.864+01:00  INFO 12200 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-24T00:06:08.864+01:00  INFO 12200 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 176 ms
+2023-11-24T00:06:08.884+01:00  INFO 12200 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-24T00:06:08.889+01:00  INFO 12200 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-24T00:06:08.890+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2023-11-24T00:06:08.891+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection conn60: url=jdbc:h2:mem:db user=SA
+2023-11-24T00:06:08.891+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2023-11-24T00:06:08.892+01:00  WARN 12200 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-24T00:06:08.904+01:00  WARN 12200 --- [           main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ProjectService.JoinTable.ProjectMembership
+2023-11-24T00:06:08.904+01:00  WARN 12200 --- [           main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ProjectService.JoinTable.ProjectMembership
+2023-11-24T00:06:08.939+01:00  INFO 12200 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-24T00:06:08.939+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
+2023-11-24T00:06:08.939+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
+2023-11-24T00:06:08.939+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
+2023-11-24T00:06:08.939+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
+2023-11-24T00:06:08.939+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table project (createdat timestamp(6) not null, id bigint generated by default as identity, lastupdatedat timestamp(6) not null, owner_id bigint, projectname varchar(20) not null, projectdescription varchar(50) not null, primary key (id))
+2023-11-24T00:06:08.941+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectmember (id bigint not null, email varchar(255) unique, primary key (id))
+2023-11-24T00:06:08.942+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectmembership (joinedproject_id bigint not null, member_id bigint not null, role_id bigint not null, primary key (joinedproject_id, member_id, role_id))
+2023-11-24T00:06:08.943+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectrole (id bigint generated by default as identity, name varchar(255) unique, primary key (id))
+2023-11-24T00:06:08.944+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists project add constraint FKgela6raf25bsa6thxog5x8lkv foreign key (owner_id) references projectmember
+2023-11-24T00:06:08.945+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKr5hoxnh9k5nutty4hon93c6fe foreign key (joinedproject_id) references project
+2023-11-24T00:06:08.945+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKt45jjcbtrrsgom05jwu0fje4b foreign key (member_id) references projectmember
+2023-11-24T00:06:08.946+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKfnovlarbluovef58uneoi1li1 foreign key (role_id) references projectrole
+2023-11-24T00:06:08.948+01:00  INFO 12200 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-24T00:06:08.998+01:00  WARN 12200 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-24T00:06:09.086+01:00  INFO 12200 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2023-11-24T00:06:09.086+01:00  INFO 12200 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-11-24T00:06:09.086+01:00  INFO 12200 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-11-24T00:06:09.100+01:00  INFO 12200 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 49373 (http) with context path ''
+2023-11-24T00:06:09.101+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : Started ProjectControllerTests in 0.426 seconds (process running for 12.904)
+2023-11-24T00:06:09.114+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : select p1_0.id,p1_0.email from projectmember p1_0 where p1_0.id=?
+2023-11-24T00:06:09.119+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : select p1_0.id,p1_0.email from projectmember p1_0 where p1_0.id=?
+2023-11-24T00:06:09.124+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : insert into projectmember (email,id) values (?,?)
+2023-11-24T00:06:09.127+01:00  INFO 12200 --- [           main] c.e.P.Project.ProjectService             : new project dto => Project{Id=null, Projectname='project666666', Projectdescription='description16666', Createdat=Fri Nov 24 00:06:09 CET 2023, Lastupdatedat=Fri Nov 24 00:06:09 CET 2023, Owner=ProjectMember{Id=144, Email='testuser144@gmail.com'}, Memberships=[]}
+2023-11-24T00:06:09.128+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : insert into project (createdat,lastupdatedat,owner_id,projectdescription,projectname,id) values (?,?,?,?,?,default)
+2023-11-24T00:06:09.129+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : SELECT * FROM `project` ORDER BY `id` DESC LIMIT 1
 ]]></system-out>
   </testcase>
-  <testcase name="shouldGetAll3ProjectsFromAccount" classname="com.example.ProjectService.ProjectControllerTests" time="0.583">
-    <system-out><![CDATA[2023-11-23T23:58:35.578+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-11-23T23:58:35.593+01:00  INFO 31980 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-23T23:58:35.593+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
-2023-11-23T23:58:35.593+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
-2023-11-23T23:58:35.593+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
-2023-11-23T23:58:35.593+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
-2023-11-23T23:58:35.593+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
-2023-11-23T23:58:35.593+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+  <testcase name="shouldGetAll3ProjectsFromAccount" classname="com.example.ProjectService.ProjectControllerTests" time="0.495">
+    <system-out><![CDATA[2023-11-24T00:06:09.144+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-24T00:06:09.148+01:00  INFO 12200 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-24T00:06:09.149+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
+2023-11-24T00:06:09.149+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
+2023-11-24T00:06:09.150+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
+2023-11-24T00:06:09.150+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
+2023-11-24T00:06:09.150+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2023-11-24T00:06:09.151+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -752,51 +752,51 @@ insert into project (createdat,lastupdatedat,owner_id,projectdescription,project
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.5)
 
-2023-11-23T23:58:35.609+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : Starting ProjectControllerTests using Java 17.0.8.1 with PID 31980 (started by mitch in D:\projecten\semester6individueel\ProjectService)
-2023-11-23T23:58:35.609+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : The following 1 profile is active: "test"
-2023-11-23T23:58:35.719+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-11-23T23:58:35.719+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-23T23:58:35.719+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 2 JPA repository interfaces.
-2023-11-23T23:58:35.719+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-11-23T23:58:35.719+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-11-23T23:58:35.735+01:00  INFO 31980 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2023-11-23T23:58:35.735+01:00  INFO 31980 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IProjectRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2023-11-23T23:58:35.735+01:00  INFO 31980 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
-2023-11-23T23:58:35.788+01:00  INFO 31980 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-11-23T23:58:35.789+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-23T23:58:35.789+01:00  INFO 31980 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
-2023-11-23T23:58:35.829+01:00  INFO 31980 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-23T23:58:35.829+01:00  INFO 31980 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 220 ms
-2023-11-23T23:58:35.860+01:00  INFO 31980 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-23T23:58:35.860+01:00  INFO 31980 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-11-23T23:58:35.860+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
-2023-11-23T23:58:35.860+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection conn70: url=jdbc:h2:mem:db user=SA
-2023-11-23T23:58:35.860+01:00  INFO 31980 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
-2023-11-23T23:58:35.860+01:00  WARN 31980 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2023-11-23T23:58:35.892+01:00  WARN 31980 --- [           main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ProjectService.JoinTable.ProjectMembership
-2023-11-23T23:58:35.892+01:00  WARN 31980 --- [           main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ProjectService.JoinTable.ProjectMembership
-2023-11-23T23:58:35.908+01:00  INFO 31980 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-11-23T23:58:35.923+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
-2023-11-23T23:58:35.923+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
-2023-11-23T23:58:35.923+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
-2023-11-23T23:58:35.923+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
-2023-11-23T23:58:35.923+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table project (createdat timestamp(6) not null, id bigint generated by default as identity, lastupdatedat timestamp(6) not null, owner_id bigint, projectname varchar(20) not null, projectdescription varchar(50) not null, primary key (id))
-2023-11-23T23:58:35.923+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectmember (id bigint not null, email varchar(255) unique, primary key (id))
-2023-11-23T23:58:35.923+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectmembership (joinedproject_id bigint not null, member_id bigint not null, role_id bigint not null, primary key (joinedproject_id, member_id, role_id))
-2023-11-23T23:58:35.923+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : create table projectrole (id bigint generated by default as identity, name varchar(255) unique, primary key (id))
-2023-11-23T23:58:35.923+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists project add constraint FKgela6raf25bsa6thxog5x8lkv foreign key (owner_id) references projectmember
-2023-11-23T23:58:35.923+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKr5hoxnh9k5nutty4hon93c6fe foreign key (joinedproject_id) references project
-2023-11-23T23:58:35.923+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKt45jjcbtrrsgom05jwu0fje4b foreign key (member_id) references projectmember
-2023-11-23T23:58:35.923+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKfnovlarbluovef58uneoi1li1 foreign key (role_id) references projectrole
-2023-11-23T23:58:35.923+01:00  INFO 31980 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-23T23:58:35.986+01:00  WARN 31980 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-23T23:58:36.096+01:00  INFO 31980 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
-2023-11-23T23:58:36.096+01:00  INFO 31980 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-11-23T23:58:36.096+01:00  INFO 31980 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2023-11-23T23:58:36.105+01:00  INFO 31980 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 63147 (http) with context path ''
-2023-11-23T23:58:36.112+01:00  INFO 31980 --- [           main] c.e.P.ProjectControllerTests             : Started ProjectControllerTests in 0.51 seconds (process running for 13.893)
-2023-11-23T23:58:36.143+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : select p1_0.id,p1_0.email from projectmember p1_0 where p1_0.id=?
-2023-11-23T23:58:36.143+01:00 DEBUG 31980 --- [           main] org.hibernate.SQL                        : SELECT * FROM project WHERE owner_id = ?
+2023-11-24T00:06:09.166+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : Starting ProjectControllerTests using Java 17.0.8.1 with PID 12200 (started by mitch in D:\projecten\semester6individueel\ProjectService)
+2023-11-24T00:06:09.166+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : The following 1 profile is active: "test"
+2023-11-24T00:06:09.258+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-24T00:06:09.258+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-24T00:06:09.269+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 2 JPA repository interfaces.
+2023-11-24T00:06:09.270+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-24T00:06:09.270+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-24T00:06:09.273+01:00  INFO 12200 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-24T00:06:09.273+01:00  INFO 12200 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.ProjectService.repositories.IProjectRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-24T00:06:09.273+01:00  INFO 12200 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2023-11-24T00:06:09.312+01:00  INFO 12200 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-11-24T00:06:09.313+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-24T00:06:09.313+01:00  INFO 12200 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-24T00:06:09.344+01:00  INFO 12200 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-24T00:06:09.344+01:00  INFO 12200 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 177 ms
+2023-11-24T00:06:09.365+01:00  INFO 12200 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-24T00:06:09.370+01:00  INFO 12200 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-24T00:06:09.371+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2023-11-24T00:06:09.372+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection conn70: url=jdbc:h2:mem:db user=SA
+2023-11-24T00:06:09.372+01:00  INFO 12200 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2023-11-24T00:06:09.372+01:00  WARN 12200 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-24T00:06:09.384+01:00  WARN 12200 --- [           main] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.example.ProjectService.JoinTable.ProjectMembership
+2023-11-24T00:06:09.384+01:00  WARN 12200 --- [           main] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.example.ProjectService.JoinTable.ProjectMembership
+2023-11-24T00:06:09.413+01:00  INFO 12200 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-24T00:06:09.414+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists project cascade 
+2023-11-24T00:06:09.414+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmember cascade 
+2023-11-24T00:06:09.414+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectmembership cascade 
+2023-11-24T00:06:09.414+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : drop table if exists projectrole cascade 
+2023-11-24T00:06:09.415+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table project (createdat timestamp(6) not null, id bigint generated by default as identity, lastupdatedat timestamp(6) not null, owner_id bigint, projectname varchar(20) not null, projectdescription varchar(50) not null, primary key (id))
+2023-11-24T00:06:09.416+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectmember (id bigint not null, email varchar(255) unique, primary key (id))
+2023-11-24T00:06:09.416+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectmembership (joinedproject_id bigint not null, member_id bigint not null, role_id bigint not null, primary key (joinedproject_id, member_id, role_id))
+2023-11-24T00:06:09.417+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : create table projectrole (id bigint generated by default as identity, name varchar(255) unique, primary key (id))
+2023-11-24T00:06:09.418+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists project add constraint FKgela6raf25bsa6thxog5x8lkv foreign key (owner_id) references projectmember
+2023-11-24T00:06:09.419+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKr5hoxnh9k5nutty4hon93c6fe foreign key (joinedproject_id) references project
+2023-11-24T00:06:09.421+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKt45jjcbtrrsgom05jwu0fje4b foreign key (member_id) references projectmember
+2023-11-24T00:06:09.422+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : alter table if exists projectmembership add constraint FKfnovlarbluovef58uneoi1li1 foreign key (role_id) references projectrole
+2023-11-24T00:06:09.424+01:00  INFO 12200 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-24T00:06:09.488+01:00  WARN 12200 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-24T00:06:09.574+01:00  INFO 12200 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2023-11-24T00:06:09.575+01:00  INFO 12200 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-11-24T00:06:09.575+01:00  INFO 12200 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-11-24T00:06:09.582+01:00  INFO 12200 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 49376 (http) with context path ''
+2023-11-24T00:06:09.585+01:00  INFO 12200 --- [           main] c.e.P.ProjectControllerTests             : Started ProjectControllerTests in 0.432 seconds (process running for 13.388)
+2023-11-24T00:06:09.617+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : select p1_0.id,p1_0.email from projectmember p1_0 where p1_0.id=?
+2023-11-24T00:06:09.619+01:00 DEBUG 12200 --- [           main] org.hibernate.SQL                        : SELECT * FROM project WHERE owner_id = ?
 ]]></system-out>
   </testcase>
 </testsuite>
