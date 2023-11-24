@@ -103,6 +103,18 @@ services:
     networks:
       - semester6project_network
 
+  api-gateway:
+    container_name: apigateway
+    image: ghcr.io/mitchell2001b/apigateway:main
+    build:
+      context: ../ApiGateway
+    ports:
+      - "${GATEWAY_LOCAL_PORT}:${GATEWAY_DOCKER_PORT}"
+    env_file:
+      - ../ApiGateway/.env
+    networks:
+      - semester6project_network
+
   redis:
     container_name: redisContainer
     image: redis:7.2.3
