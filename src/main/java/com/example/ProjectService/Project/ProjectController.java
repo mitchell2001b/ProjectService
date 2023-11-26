@@ -45,7 +45,7 @@ public class ProjectController
                     .body(e.toString());
         }
         return ResponseEntity.status(HttpStatus.CREATED)
-                .body("{ \"id\": "+ project.GetId() + " }");
+                .body("Project created successfully");
     }
 
     @PostMapping(value = "/myprojects")
