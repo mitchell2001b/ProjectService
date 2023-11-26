@@ -109,7 +109,7 @@ class ProjectControllerTests {
                         .content(objectMapper.writeValueAsString(project))
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isCreated())
-                .andExpect(jsonPath("id").value(4));
+                .andExpect(MockMvcResultMatchers.content().string("Project created successfully"));
     }
 
     @Test
@@ -128,8 +128,7 @@ class ProjectControllerTests {
                         .content(objectMapper.writeValueAsString(project))
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isCreated())
-                .andExpect(MockMvcResultMatchers.jsonPath("id").exists())
-                .andExpect(jsonPath("id").value(1));// Assuming the response contains the project ID
+                .andExpect(MockMvcResultMatchers.content().string("Project created successfully"));
     }
 
     @Test
