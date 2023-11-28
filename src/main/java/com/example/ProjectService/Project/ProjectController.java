@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:8585, http://api-gateway:8585, http://apigateway:8585, http://localhost:8787, http://taskboarding-frontend:8787, http://localhost:3001, http://taskboarding-frontend:3001, http://taskboarding-frontend.localhost:9080"})
+@CrossOrigin(origins = {"http://localhost:8585, http://api-gateway:8585, http://apigateway:8585, http://localhost:8787, http://taskboarding-frontend:8787, http://localhost:3001, http://taskboarding-frontend:3001, http://taskboarding-frontend.localhost:9080,  http://taskboarding-frontend:9080"})
 @RequestMapping(path = "api/projects")
 public class ProjectController
 {
