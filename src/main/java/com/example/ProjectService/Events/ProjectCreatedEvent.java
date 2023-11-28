@@ -12,7 +12,6 @@ public class ProjectCreatedEvent implements Serializable
 
     private String ProjectName;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
     private Date Createdat;
 
     public ProjectCreatedEvent(long id, String projectName, Date createdat)
@@ -27,18 +26,15 @@ public class ProjectCreatedEvent implements Serializable
 
     }
 
-    public long GetId()
-    {
+    public long getId() {
         return Id;
     }
 
-    public String GetProjectName()
-    {
+    public String getProjectName() {
         return ProjectName;
     }
 
-    public Date GetCreatedat()
-    {
+    public Date getCreatedat() {
         return Createdat;
     }
 

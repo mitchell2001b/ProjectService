@@ -121,6 +121,7 @@ public class ProjectService
             owner = accountRepository.findById(newProject.GetOwner().GetId());
         }
 
+
         if(!owner.isEmpty())
         {
             Project project = new Project(newProject.GetProjectDescription(), new Date(), new Date(), owner.get(), newProject.GetProjectName());
@@ -130,7 +131,7 @@ public class ProjectService
 
             Project lastCreated = projectRepository.findLastCreatedProject();
             ProjectCreatedEvent event = new ProjectCreatedEvent(lastCreated.GetId(), lastCreated.getProjectname(), lastCreated.GetCreatedat());
-            projectProducer.SendMessage(event);
+            this.projectProducer.SendMessage(event);
 
         }
 
