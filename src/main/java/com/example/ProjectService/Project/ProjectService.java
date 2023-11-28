@@ -1,8 +1,10 @@
 package com.example.ProjectService.Project;
 
+import com.example.ProjectService.Events.ProjectCreatedEvent;
 import com.example.ProjectService.ProjectMember.ProjectMember;
 import com.example.ProjectService.Project.dtos.ProjectDto;
 import com.example.ProjectService.Project.dtos.ProjectMemberDto;
+import com.example.ProjectService.kafka.ProjectProducer;
 import com.example.ProjectService.repositories.IAccountRepository;
 import com.example.ProjectService.repositories.IProjectRepository;
 import org.slf4j.Logger;
@@ -24,15 +26,17 @@ import java.util.Optional;
 @CacheConfig(cacheNames = "projectsByOwner")
 public class ProjectService
 {
+    private final ProjectProducer projectProducer;
     private static final Logger LOGGER = LoggerFactory.getLogger(ProjectService.class);
     private IProjectRepository projectRepository;
     private IAccountRepository accountRepository;
 
     @Autowired
-    public ProjectService(IProjectRepository projectRepo, IAccountRepository accountRepo)
+    public ProjectService(IProjectRepository projectRepo, IAccountRepository accountRepo, ProjectProducer projectProd)
     {
         this.projectRepository = projectRepo;
         this.accountRepository = accountRepo;
+        this.projectProducer = projectProd;
     }
     @Cacheable(value = "projectsByOwner", key = "#givenOwnerDto.GetId()")
     public List<ProjectDto> GetAllProjectsFromOwner(ProjectMemberDto givenOwnerDto)
@@ -123,6 +127,10 @@ public class ProjectService
             LOGGER.info(String.format("new project dto => %s", project.toString()));
 
             projectRepository.save(project);
+
+            Project lastCreated = projectRepository.findLastCreatedProject();
+            ProjectCreatedEvent event = new ProjectCreatedEvent(lastCreated.GetId(), lastCreated.getProjectname(), lastCreated.GetCreatedat());
+            projectProducer.SendMessage(event);
 
         }
 

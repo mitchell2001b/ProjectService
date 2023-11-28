@@ -1,0 +1,2 @@
+com\example\ProjectService\Events\ProjectCreatedEvent.class
+com\example\ProjectService\kafka\ProjectProducer.class

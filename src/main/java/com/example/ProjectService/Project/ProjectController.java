@@ -23,8 +23,7 @@ import java.util.List;
 public class ProjectController
 {
     private static final Logger LOGGER = LoggerFactory.getLogger(ProjectController.class);
-    ProjectService projectService;
-
+    private final ProjectService projectService;
     @Autowired
     public ProjectController(ProjectService service)
     {
