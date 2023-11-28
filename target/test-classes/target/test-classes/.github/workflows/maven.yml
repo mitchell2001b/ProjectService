@@ -30,3 +30,6 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
+    - name: Set workflow status output
+      id: set-status
+      run: echo "::set-output name=workflow-status::${{ job.status }}"

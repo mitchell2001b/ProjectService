@@ -3,6 +3,7 @@ package com.example.ProjectService;
 import com.example.ProjectService.Project.Project;
 import com.example.ProjectService.Project.dtos.ProjectDto;
 import com.example.ProjectService.Project.dtos.ProjectMemberDto;
+import com.example.ProjectService.kafka.ProjectProducer;
 import com.example.ProjectService.kafka.RegistrationConsumer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -34,7 +35,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
 @TestPropertySource(locations = "classpath:application-test.properties")
-@MockBean(RegistrationConsumer.class)
+@MockBean({RegistrationConsumer.class, ProjectProducer.class})
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
 class ProjectControllerTests {
 
