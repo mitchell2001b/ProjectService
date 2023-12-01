@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: projectservice-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: projectservice
+  template:
+    metadata:
+      labels:
+        app: projectservice
+    spec:
+      containers:
+        - name: projectservice
+          image: ghcr.io/mitchell2001b/projectservice:main
+          ports:
+            - containerPort: 8888
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: "jdbc:mysql://project-db:3306/projectdb"
+          imagePullPolicy: Always
+      imagePullSecrets:
+        - name: ghcr-secret
