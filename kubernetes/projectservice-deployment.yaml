@@ -20,6 +20,11 @@ spec:
           env:
             - name: SPRING_DATASOURCE_URL
               value: "jdbc:mysql://project-db:3306/projectdb"
+          resources:
+            requests:
+              cpu: "50m"
+            limits:
+              cpu: "100m"
           imagePullPolicy: Always
       imagePullSecrets:
         - name: ghcr-secret

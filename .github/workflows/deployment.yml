@@ -1,0 +1,40 @@
+name: Deploy to k3d
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'ProjectService/kubernetes/deployment.yaml'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install k3d
+        run: |
+          wget -q -O - https://raw.githubusercontent.com/rancher/k3d/main/install.sh | bash
+
+      - name: Check if k3d cluster exists
+        id: check_cluster
+        run: |
+          if ! k3d cluster get semester6; then
+            echo "Cluster does not exist, creating..."
+            k3d cluster create semester6 --servers 1 --agents 1 --port 9080:80@loadbalancer
+          else
+            echo "Cluster already exists."
+          fi
+
+      - name: Set up kubectl
+        run: kubectl config use-context k3d-semester6
+
+      - name: Show k3d Cluster Info
+        run: k3d cluster list
+
+      - name: Update Deployment
+        run: |
+          kubectl apply -f

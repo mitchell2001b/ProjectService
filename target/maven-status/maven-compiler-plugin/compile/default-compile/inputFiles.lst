@@ -4,6 +4,7 @@ D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\Proje
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\Events\ProjectCreatedEvent.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\kafka\RegistrationConsumer.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\kafka\ProjectProducer.java
+D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\kafka\RegistrationDeleteConsumer.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\Project\dtos\ProjectMembershipDto.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\Configuration\KafkaConfiguration.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\Project\ProjectService.java
