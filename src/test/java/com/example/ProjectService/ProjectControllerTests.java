@@ -5,6 +5,7 @@ import com.example.ProjectService.Project.dtos.ProjectDto;
 import com.example.ProjectService.Project.dtos.ProjectMemberDto;
 import com.example.ProjectService.kafka.ProjectProducer;
 import com.example.ProjectService.kafka.RegistrationConsumer;
+import com.example.ProjectService.kafka.RegistrationDeleteConsumer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.hamcrest.Matchers;
@@ -35,7 +36,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
 @TestPropertySource(locations = "classpath:application-test.properties")
-@MockBean({RegistrationConsumer.class, ProjectProducer.class})
+@MockBean({RegistrationConsumer.class, ProjectProducer.class, RegistrationDeleteConsumer.class})
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
 class ProjectControllerTests {
 
