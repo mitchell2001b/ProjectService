@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: projectservice-ingress
+spec:
+  rules:
+    - host: projectservice.localhost
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: projectservice
+                port:
+                  number: 8888
