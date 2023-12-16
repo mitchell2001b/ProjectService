@@ -29,7 +29,7 @@ public class Project
     @Column(nullable = false)
     private Date Lastupdatedat;
     @JsonIgnore
-    @ManyToOne
+    @ManyToOne()
     private ProjectMember Owner;
 
     @JsonIgnore

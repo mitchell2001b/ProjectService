@@ -10,9 +10,10 @@ import jakarta.persistence.*;
 public class ProjectMember
 {
     @jakarta.persistence.Id
+    @Column(nullable = false)
     private Long Id;
 
-    @Column(unique=true)
+    @Column(unique=true, nullable = false, length = 20)
     private String Email;
 
     public ProjectMember(Long id, String email)
