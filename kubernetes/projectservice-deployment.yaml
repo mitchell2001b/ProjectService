@@ -17,9 +17,9 @@ spec:
           image: ghcr.io/mitchell2001b/projectservice:main
           ports:
             - containerPort: 8888
-          env:
-            - name: SPRING_DATASOURCE_URL
-              value: "jdbc:mysql://project-db:3306/projectdb"
+          envFrom:
+            - configMapRef:
+                name: project-db-env
           resources:
             requests:
               cpu: "50m"
