@@ -41,7 +41,11 @@ public class RegistrationConsumer
             Long accountId = accountIdNumber.longValue();
             String email = (String) eventMap.get("email");
             ProjectMember projectMember = new ProjectMember(accountId, email);
-            this.accountRepo.save(projectMember);
+            if(!accountRepo.findById(accountId).isPresent())
+            {
+                this.accountRepo.save(projectMember);
+            }
+
             LOGGER.info(String.format("User created event received in project service => %s", projectMember.toString()));
         }
         catch(JsonProcessingException e)
