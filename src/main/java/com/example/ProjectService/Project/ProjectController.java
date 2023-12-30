@@ -16,6 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -47,7 +48,8 @@ public class ProjectController
                 .body("Project created successfully");
     }
 
-    @PostMapping(value = "/myprojects")
+
+    /*@PostMapping(value = "/myprojects")
     public ResponseEntity<List<ProjectDto>> GetAllProjectsFromOwner(@RequestBody ProjectMemberDto ownerDto)
     {
         if(ownerDto == null)
@@ -82,6 +84,19 @@ public class ProjectController
         }
         return null;
 
+    }*/
+    @PostMapping(value = "/myprojects")
+    public CompletableFuture<ResponseEntity<List<ProjectDto>>> GetAllProjectsFromOwner(@RequestBody ProjectMemberDto ownerDto) {
+        if (ownerDto == null) {
+            return CompletableFuture.completedFuture(ResponseEntity.badRequest().build());
+        }
+
+        return this.projectService.GetAllProjectsFromOwnerInDbAsync(ownerDto)
+                .thenApply(dtos -> ResponseEntity.ok(dtos))
+                .exceptionally(ex -> {
+                    LOGGER.error("Error getting my projects", ex);
+                    return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+                });
     }
     @GetMapping(value = "/tess")
     public String tess()

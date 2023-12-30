@@ -15,14 +15,18 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.RedisConnectionFailureException;
 import org.springframework.data.redis.cache.RedisCacheManager;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
 
 @Service
+@EnableAsync
 @CacheConfig(cacheNames = "projectsByOwner")
 public class ProjectService
 {
@@ -37,6 +41,49 @@ public class ProjectService
         this.projectRepository = projectRepo;
         this.accountRepository = accountRepo;
         this.projectProducer = projectProd;
+    }
+
+    @Async
+    @Cacheable(value = "projectsByOwner", key = "#givenOwnerDto.GetId()")
+    public CompletableFuture<List<ProjectDto>> GetAllProjectsFromOwnerAsync(ProjectMemberDto givenOwnerDto)
+    {
+        return CompletableFuture.supplyAsync(() -> {
+            try {
+                return GetAllProjectsFromOwner(givenOwnerDto);
+            } catch (Exception e) {
+
+                LOGGER.error("Error in getAllProjectsFromOwnerAsync", e);
+                throw new RuntimeException(e);
+            }
+        });
+    }
+
+    @Async
+    public CompletableFuture<List<ProjectDto>> GetAllProjectsFromOwnerInDbAsync(ProjectMemberDto givenOwnerDto)
+    {
+        return CompletableFuture.supplyAsync(() -> {
+            try {
+                return GetAllProjectsFromOwnerInDb(givenOwnerDto);
+            } catch (Exception e) {
+
+                LOGGER.error("Error in getAllProjectsFromOwnerInDbAsync", e);
+                throw new RuntimeException(e);
+            }
+        });
+    }
+
+    @Async
+    public CompletableFuture<Void> ResetProjectsByOwnerCacheAsync()
+    {
+        return CompletableFuture.runAsync(() -> {
+            try {
+                ResetProjectsByOwnerCache();
+            } catch (Exception e) {
+
+                LOGGER.error("Error in resetProjectsByOwnerCacheAsync", e);
+                throw new RuntimeException(e);
+            }
+        });
     }
     @Cacheable(value = "projectsByOwner", key = "#givenOwnerDto.GetId()")
     public List<ProjectDto> GetAllProjectsFromOwner(ProjectMemberDto givenOwnerDto)

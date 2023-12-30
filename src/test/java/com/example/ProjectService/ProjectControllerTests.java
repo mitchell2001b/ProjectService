@@ -23,7 +23,14 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.asyncDispatch;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+
 import java.util.Date;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -51,15 +58,18 @@ class ProjectControllerTests {
         objectMapper.registerModule(new JavaTimeModule());
         ProjectMemberDto owner = new ProjectMemberDto(140L, "testusr140@gmail.com");
 
-        var result = mockMvc.perform(MockMvcRequestBuilders.post("/api/projects/myprojects")
+        var result = mockMvc.perform(post("/api/projects/myprojects")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(owner))
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
+                .andReturn();
+
+        mockMvc.perform(asyncDispatch(result))
+                .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].id").value(1))
                 .andExpect(jsonPath("$[1].id").value(2))
-                .andExpect(jsonPath("$[2].id").value(3))
-                .andReturn();
+                .andExpect(jsonPath("$[2].id").value(3));
 
     }
 
@@ -71,7 +81,7 @@ class ProjectControllerTests {
         objectMapper.registerModule(new JavaTimeModule());
         ProjectMemberDto owner = new ProjectMemberDto(142L, "testusr142@gmail.com");
 
-        var result = mockMvc.perform(MockMvcRequestBuilders.post("/api/projects/myprojects")
+        var result = mockMvc.perform(post("/api/projects/myprojects")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(owner))
                         .accept(MediaType.APPLICATION_JSON))
@@ -87,7 +97,7 @@ class ProjectControllerTests {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
 
-        var result = mockMvc.perform(MockMvcRequestBuilders.post("/api/projects/myprojects")
+        var result = mockMvc.perform(post("/api/projects/myprojects")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(null))
                         .accept(MediaType.APPLICATION_JSON))
@@ -106,7 +116,7 @@ class ProjectControllerTests {
         objectMapper.registerModule(new JavaTimeModule());
 
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/projects/create")
+        mockMvc.perform(post("/api/projects/create")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(project))
                         .accept(MediaType.APPLICATION_JSON))
@@ -125,7 +135,7 @@ class ProjectControllerTests {
         objectMapper.registerModule(new JavaTimeModule());
 
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/projects/create")
+        mockMvc.perform(post("/api/projects/create")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(project))
                         .accept(MediaType.APPLICATION_JSON))
@@ -142,7 +152,7 @@ class ProjectControllerTests {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/projects/create")
+        mockMvc.perform(post("/api/projects/create")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(null))
                         .accept(MediaType.APPLICATION_JSON))
@@ -159,7 +169,7 @@ class ProjectControllerTests {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/projects/create")
+        mockMvc.perform(post("/api/projects/create")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(project))
                         .accept(MediaType.APPLICATION_JSON))
