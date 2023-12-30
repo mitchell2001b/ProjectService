@@ -86,8 +86,13 @@ class ProjectControllerTests {
                         .content(objectMapper.writeValueAsString(owner))
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
+                .andReturn();
+
+        mockMvc.perform(asyncDispatch(result))
+                .andExpect(status().isOk())
                 .andExpect(jsonPath("$", Matchers.hasSize(0)));
 
+        //.andExpect(jsonPath("$", Matchers.hasSize(0)));
     }
 
     @Test
