@@ -12,6 +12,7 @@ D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\Proje
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\Project\Project.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\ProjectMember\ProjectMember.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\Project\ProjectController.java
+D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\Configuration\KeyVaultConfig.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\Project\dtos\ProjectMemberDto.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\repositories\IProjectRepository.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\Project\dtos\ProjectDto.java

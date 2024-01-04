@@ -1,4 +1,5 @@
 com\example\ProjectService\kafka\RegistrationDeleteConsumer$1.class
 com\example\ProjectService\Events\ProjectCreatedEvent.class
 com\example\ProjectService\kafka\RegistrationDeleteConsumer.class
+com\example\ProjectService\Configuration\KeyVaultConfig.class
 com\example\ProjectService\kafka\ProjectProducer.class
