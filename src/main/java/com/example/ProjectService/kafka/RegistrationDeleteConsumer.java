@@ -37,7 +37,7 @@ public class RegistrationDeleteConsumer
 
 
     @Transactional
-    @KafkaListener(topics = "${spring.kafka.consumer2.topic.name}", groupId = "${spring.kafka.consumer2.group-id}")
+    @KafkaListener(topics = "${spring.kafka.topic2.name}", groupId = "${spring.kafka.consumer2.group-id}")
     public void consume(String jsonEvent) {
         try
         {
