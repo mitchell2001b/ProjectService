@@ -1,5 +1,6 @@
 package com.example.ProjectService;
 
+import AzureServices.KeyVaultService;
 import com.example.ProjectService.Project.Project;
 import com.example.ProjectService.Project.dtos.ProjectDto;
 import com.example.ProjectService.Project.dtos.ProjectMemberDto;
@@ -8,6 +9,9 @@ import com.example.ProjectService.kafka.RegistrationConsumer;
 import com.example.ProjectService.kafka.RegistrationDeleteConsumer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.security.Keys;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,11 +31,18 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
+import javax.crypto.SecretKey;
+
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.*;
+
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.user;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.asyncDispatch;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -63,11 +74,12 @@ class ProjectControllerTests {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
         ProjectMemberDto owner = new ProjectMemberDto(140L, "testusr140@gmail.com");
-
+        String mockToken = CreateMockToken("testusr140@gmail.com", 140L, "user");
         var result = mockMvc.perform(post("/api/projects/myprojects")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(owner))
-                        .accept(MediaType.APPLICATION_JSON))
+                        .accept(MediaType.APPLICATION_JSON)
+                        .header("Authorization", "Bearer " + mockToken))
                 .andExpect(status().isOk())
                 .andReturn();
 
@@ -86,11 +98,12 @@ class ProjectControllerTests {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
         ProjectMemberDto owner = new ProjectMemberDto(142L, "testusr142@gmail.com");
-
+        String mockToken = CreateMockToken("testusr142@gmail.com", 142L, "user");
         var result = mockMvc.perform(post("/api/projects/myprojects")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(owner))
-                        .accept(MediaType.APPLICATION_JSON))
+                        .accept(MediaType.APPLICATION_JSON)
+                        .header("Authorization", "Bearer " + mockToken))
                 .andExpect(status().isOk())
                 .andReturn();
 
@@ -125,12 +138,14 @@ class ProjectControllerTests {
         //ProjectDto project2 = new ProjectDto("description2", new Date(), owner, "project662");
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
+        String mockToken = CreateMockToken("testusr140@gmail.com", 140L, "user");
 
 
         mockMvc.perform(post("/api/projects/create")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(project))
-                        .accept(MediaType.APPLICATION_JSON))
+                        .accept(MediaType.APPLICATION_JSON)
+                        .header("Authorization", "Bearer " + mockToken))
                 .andExpect(MockMvcResultMatchers.status().isCreated())
                 .andExpect(MockMvcResultMatchers.content().string("Project created successfully"));
     }
@@ -144,12 +159,13 @@ class ProjectControllerTests {
         ProjectDto project = new ProjectDto("description16666", new Date(), owner, "project666666");
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
-
+        String mockToken = CreateMockToken("testusr144@gmail.com", 144L, "user");
 
         mockMvc.perform(post("/api/projects/create")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(project))
-                        .accept(MediaType.APPLICATION_JSON))
+                        .accept(MediaType.APPLICATION_JSON)
+                        .header("Authorization", "Bearer " + mockToken))
                 .andExpect(MockMvcResultMatchers.status().isCreated())
                 .andExpect(MockMvcResultMatchers.content().string("Project created successfully"));
     }
@@ -159,6 +175,7 @@ class ProjectControllerTests {
     void shouldNotCreateProject() throws Exception {
 
         ProjectMemberDto owner = new ProjectMemberDto(140L, "testusr140@gmail.com");
+        String mockToken = CreateMockToken("testusr140@gmail.com", 140L, "user");
 
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
@@ -166,7 +183,8 @@ class ProjectControllerTests {
         mockMvc.perform(post("/api/projects/create")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(null))
-                        .accept(MediaType.APPLICATION_JSON))
+                        .accept(MediaType.APPLICATION_JSON)
+                        .header("Authorization", "Bearer " + mockToken))
                 .andExpect(MockMvcResultMatchers.status().isBadRequest());
 
 
@@ -179,11 +197,29 @@ class ProjectControllerTests {
         ProjectDto project = new ProjectDto("description16666", new Date(), owner, "thisnameiswaytolongforaprojectandsonotallowed");
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
+        String mockToken = CreateMockToken("testusr140@gmail.com", 140L, "user");
 
         mockMvc.perform(post("/api/projects/create")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(project))
-                        .accept(MediaType.APPLICATION_JSON))
+                        .accept(MediaType.APPLICATION_JSON)
+                        .header("Authorization", "Bearer " + mockToken))
                 .andExpect(MockMvcResultMatchers.status().isConflict());
+    }
+
+
+    private String CreateMockToken(String email, Long id, String roleName) {
+
+        String mockKey = "MockKeyForSemester6TestInprojectService";
+        Instant expirationDate = Instant.now().plusSeconds(3600);
+        SecretKey signingKey = Keys.hmacShaKeyFor(mockKey.getBytes());
+
+        return Jwts.builder()
+                .claim("email", email)
+                .claim("id", id)
+                .claim("roleName", roleName)
+                .setExpiration(Date.from(expirationDate))
+                .signWith(signingKey)
+                .compact();
     }
 }

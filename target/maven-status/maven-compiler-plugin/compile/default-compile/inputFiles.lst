@@ -16,6 +16,7 @@ D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\Proje
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\Project\dtos\ProjectMemberDto.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\repositories\IProjectRepository.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\Project\dtos\ProjectDto.java
+D:\projecten\semester6individueel\ProjectService\src\main\java\AzureServices\KeyVaultService.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\ProjectRole\ProjectRole.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\Configuration\CustomCacheErrorHandler.java
 D:\projecten\semester6individueel\ProjectService\src\main\java\com\example\ProjectService\JoinTable\ProjectAccountRole.java

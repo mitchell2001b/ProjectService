@@ -23,6 +23,8 @@ import java.util.concurrent.CompletableFuture;
 @RequestMapping(path = "api/projects")
 public class ProjectController
 {
+    private static final String ENVIRONMENT_PROPERTY = "spring.profiles.active";
+    private static final String TEST_PROFILE = "test";
     private static final Logger LOGGER = LoggerFactory.getLogger(ProjectController.class);
     private final ProjectService projectService;
     @Autowired
@@ -30,8 +32,20 @@ public class ProjectController
     {
         this.projectService = service;
     }
+
+
+
+
+
+
+    public static boolean isTestingEnvironment()
+    {
+        String activeProfiles = System.getProperty(ENVIRONMENT_PROPERTY);
+        return activeProfiles != null && activeProfiles.contains(TEST_PROFILE);
+    }
+
     @PostMapping(value = "/create")
-    public ResponseEntity<String> CreateProject(@RequestBody ProjectDto newProject)
+    public ResponseEntity<String> CreateProject(@RequestBody ProjectDto newProject, @RequestHeader(name = "Authorization") String authorizationHeader)
     {
         Project project = null;
         try
@@ -86,9 +100,17 @@ public class ProjectController
 
     }*/
     @PostMapping(value = "/myprojects")
-    public CompletableFuture<ResponseEntity<List<ProjectDto>>> GetAllProjectsFromOwner(@RequestBody ProjectMemberDto ownerDto) {
+    public CompletableFuture<ResponseEntity<List<ProjectDto>>> GetAllProjectsFromOwner(@RequestBody ProjectMemberDto ownerDto, @RequestHeader(name = "Authorization") String authorizationHeader) {
         if (ownerDto == null) {
             return CompletableFuture.completedFuture(ResponseEntity.badRequest().build());
+        }
+        if(isTestingEnvironment())
+        {
+            //use testing key
+        }
+        else
+        {
+            //use real key
         }
 
         return this.projectService.GetAllProjectsFromOwnerInDbAsync(ownerDto)
@@ -104,3 +126,6 @@ public class ProjectController
         return "tes dit is tes";
     }
 }
+
+
+
