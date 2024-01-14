@@ -63,7 +63,7 @@ public class ProjectController
     @PostMapping(value = "/create")
     public ResponseEntity<String> CreateProject(@RequestBody ProjectDto newProject, @RequestHeader(name = "Authorization") String authorizationHeader)
     {
-        microMeterRegistry.counter("project.create.http.requests.total.amount", "endpoint", "/create");
+        microMeterRegistry.counter("project_create_http.requests_total_amount", "endpoint", "/create");
         String jwtToken = authorizationHeader.replace("Bearer ", "");
         if (environment.matchesProfiles("test"))
         {
@@ -142,7 +142,7 @@ public class ProjectController
     @PostMapping(value = "/myprojects")
     public CompletableFuture<ResponseEntity<List<ProjectDto>>> GetAllProjectsFromOwner(@RequestBody ProjectMemberDto ownerDto, @RequestHeader(name = "Authorization") String authorizationHeader) {
 
-        microMeterRegistry.counter("project.myprojects.http.requests.total.amount", "endpoint", "/myprojects");
+        microMeterRegistry.counter("project_myprojects_http_requests.total_amount", "endpoint", "/myprojects");
         if (ownerDto == null) {
             return CompletableFuture.completedFuture(ResponseEntity.badRequest().build());
         }
