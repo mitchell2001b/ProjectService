@@ -7,6 +7,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
+import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,6 +40,7 @@ public class ProjectController
 
     private final Environment environment;
 
+    private Counter createCallsCounter;
     private String secretKey;
     @Autowired
     public ProjectController(ProjectService service, MeterRegistry meterRegistry, KeyVaultService vaultService, Environment envi)
@@ -63,7 +65,7 @@ public class ProjectController
     @PostMapping(value = "/create")
     public ResponseEntity<String> CreateProject(@RequestBody ProjectDto newProject, @RequestHeader(name = "Authorization") String authorizationHeader)
     {
-        microMeterRegistry.counter("project_create_http_requests_total_amount", "endpoint", "/actuator/prometheus").increment();
+        createCallsCounter = microMeterRegistry.counter("project.create.calls", "type", "project");
 
         String jwtToken = authorizationHeader.replace("Bearer ", "");
         if (environment.matchesProfiles("test"))
@@ -77,6 +79,7 @@ public class ProjectController
 
         Project project = null;
 
+        createCallsCounter.increment();
         SecretKey signingKey = Keys.hmacShaKeyFor(secretKey.getBytes());
         Jws<Claims> jws = Jwts.parser().setSigningKey(signingKey).build().parseClaimsJws(jwtToken);
         Claims claims = jws.getBody();
