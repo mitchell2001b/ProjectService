@@ -1,11 +1,18 @@
 package com.example.ProjectService.Project;
 
+import AzureServices.KeyVaultService;
 import com.example.ProjectService.Project.dtos.ProjectDto;
 import com.example.ProjectService.Project.dtos.ProjectMemberDto;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.security.Keys;
 import io.lettuce.core.RedisCommandTimeoutException;
 import io.lettuce.core.RedisConnectionException;
+import io.micrometer.core.instrument.MeterRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.env.Environment;
 import org.springframework.data.redis.RedisConnectionFailureException;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +22,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.crypto.SecretKey;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
@@ -27,10 +35,21 @@ public class ProjectController
     private static final String TEST_PROFILE = "test";
     private static final Logger LOGGER = LoggerFactory.getLogger(ProjectController.class);
     private final ProjectService projectService;
+
+    private final MeterRegistry microMeterRegistry;
+
+    private final KeyVaultService keyVaultService;
+
+    private final Environment environment;
+
+    private String secretKey;
     @Autowired
-    public ProjectController(ProjectService service)
+    public ProjectController(ProjectService service, MeterRegistry meterRegistry, KeyVaultService vaultService, Environment envi)
     {
         this.projectService = service;
+        this.microMeterRegistry = meterRegistry;
+        this.keyVaultService = vaultService;
+        this.environment = envi;
     }
 
 
@@ -47,10 +66,34 @@ public class ProjectController
     @PostMapping(value = "/create")
     public ResponseEntity<String> CreateProject(@RequestBody ProjectDto newProject, @RequestHeader(name = "Authorization") String authorizationHeader)
     {
+        microMeterRegistry.counter("project.create.http.requests.total.amount", "endpoint", "/create");
+        String jwtToken = authorizationHeader.replace("Bearer ", "");
+        if (environment.matchesProfiles("test"))
+        {
+            secretKey = "MockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectService";
+        }
+        else
+        {
+            secretKey = keyVaultService.getSecretValue("semester6key");
+        }
+
         Project project = null;
+
+        SecretKey signingKey = Keys.hmacShaKeyFor(secretKey.getBytes());
+        Jws<Claims> jws = Jwts.parser().setSigningKey(signingKey).build().parseClaimsJws(jwtToken);
+        Claims claims = jws.getBody();
+        String roleName = (String) claims.get("roleName");
+
+
+        if (!"user".equals(roleName) && !"admin".equals(roleName))
+        {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                    .body("Not authorized");
+        }
         try
         {
             project = projectService.CreateProject(newProject);
+
         }
         catch (Exception e)
         {
@@ -101,16 +144,30 @@ public class ProjectController
     }*/
     @PostMapping(value = "/myprojects")
     public CompletableFuture<ResponseEntity<List<ProjectDto>>> GetAllProjectsFromOwner(@RequestBody ProjectMemberDto ownerDto, @RequestHeader(name = "Authorization") String authorizationHeader) {
+
+        microMeterRegistry.counter("project.myprojects.http.requests.total.amount", "endpoint", "/myprojects");
         if (ownerDto == null) {
             return CompletableFuture.completedFuture(ResponseEntity.badRequest().build());
         }
-        if(isTestingEnvironment())
+        String jwtToken = authorizationHeader.replace("Bearer ", "");
+
+        if (environment.matchesProfiles("test"))
         {
-            //use testing key
+            secretKey = "MockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectService";
         }
         else
         {
-            //use real key
+            secretKey = keyVaultService.getSecretValue("semester6key");
+        }
+        SecretKey signingKey = Keys.hmacShaKeyFor(secretKey.getBytes());
+        Jws<Claims> jws = Jwts.parser().setSigningKey(signingKey).build().parseClaimsJws(jwtToken);
+        Claims claims = jws.getBody();
+        String roleName = (String) claims.get("roleName");
+
+
+        if (!"user".equals(roleName) && !"admin".equals(roleName))
+        {
+            return CompletableFuture.completedFuture(ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null));
         }
 
         return this.projectService.GetAllProjectsFromOwnerInDbAsync(ownerDto)

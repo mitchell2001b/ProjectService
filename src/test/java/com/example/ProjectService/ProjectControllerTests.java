@@ -1,6 +1,7 @@
 package com.example.ProjectService;
 
 import AzureServices.KeyVaultService;
+import com.azure.security.keyvault.secrets.SecretClient;
 import com.example.ProjectService.Project.Project;
 import com.example.ProjectService.Project.dtos.ProjectDto;
 import com.example.ProjectService.Project.dtos.ProjectMemberDto;
@@ -53,13 +54,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest(
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
-        classes = ProjectServiceApplication.class
+        classes = { ProjectServiceApplication.class, KeyVaultService.class}
+
 )
 @EnableAutoConfiguration(exclude = { SecurityAutoConfiguration.class, ManagementWebSecurityAutoConfiguration.class })
 @AutoConfigureMockMvc()
 @ActiveProfiles("test")
 @TestPropertySource(locations = "classpath:application-test.properties")
-@MockBean({RegistrationConsumer.class, ProjectProducer.class, RegistrationDeleteConsumer.class})
+@MockBean({RegistrationConsumer.class, ProjectProducer.class, RegistrationDeleteConsumer.class, SecretClient.class})
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
 @WithMockUser(roles = {})
 class ProjectControllerTests {
@@ -135,7 +137,7 @@ class ProjectControllerTests {
         //user already exists in Database
         ProjectMemberDto owner = new ProjectMemberDto(140L, "testusr140@gmail.com");
         ProjectDto project = new ProjectDto("description1", new Date(), owner, "project66");
-        //ProjectDto project2 = new ProjectDto("description2", new Date(), owner, "project662");
+
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
         String mockToken = CreateMockToken("testusr140@gmail.com", 140L, "user");
@@ -210,7 +212,7 @@ class ProjectControllerTests {
 
     private String CreateMockToken(String email, Long id, String roleName) {
 
-        String mockKey = "MockKeyForSemester6TestInprojectService";
+        String mockKey = "MockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectService";
         Instant expirationDate = Instant.now().plusSeconds(3600);
         SecretKey signingKey = Keys.hmacShaKeyFor(mockKey.getBytes());
 
