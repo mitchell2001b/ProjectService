@@ -1,7 +1,7 @@
 package com.example.ProjectService.JoinTable;
 
 import com.example.ProjectService.ProjectMember.ProjectMember;
-import com.example.ProjectService.ProjectRole.Project.Project;
+import com.example.ProjectService.Project.Project;
 import com.example.ProjectService.ProjectRole.ProjectRole;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

@@ -1,6 +1,6 @@
 package com.example.ProjectService.repositories;
 
-import com.example.ProjectService.ProjectRole.Project.Project;
+import com.example.ProjectService.Project.Project;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

@@ -2,8 +2,8 @@ package com.example.ProjectService;
 
 import com.example.ProjectService.AzureServices.KeyVaultService;
 import com.azure.security.keyvault.secrets.SecretClient;
-import com.example.ProjectService.ProjectRole.Project.dtos.ProjectDto;
-import com.example.ProjectService.ProjectRole.Project.dtos.ProjectMemberDto;
+import com.example.ProjectService.dtos.ProjectDto;
+import com.example.ProjectService.dtos.ProjectMemberDto;
 import com.example.ProjectService.kafka.ProjectProducer;
 import com.example.ProjectService.kafka.RegistrationConsumer;
 import com.example.ProjectService.kafka.RegistrationDeleteConsumer;

@@ -1,4 +1,11 @@
 com\example\ProjectService\kafka\RegistrationDeleteConsumer$1.class
+com\example\ProjectService\dtos\ProjectMembershipDto.class
+com\example\ProjectService\dtos\ProjectMemberDto.class
+com\example\ProjectService\Project\Project.class
+com\example\ProjectService\Project\ProjectController.class
+com\example\ProjectService\dtos\ProjectRoleDto.class
+com\example\ProjectService\Project\ProjectService.class
+com\example\ProjectService\dtos\ProjectDto.class
 com\example\ProjectService\Events\ProjectCreatedEvent.class
 com\example\ProjectService\kafka\RegistrationDeleteConsumer.class
 com\example\ProjectService\Configuration\KeyVaultConfig.class
