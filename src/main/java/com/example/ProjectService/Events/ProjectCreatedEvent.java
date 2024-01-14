@@ -1,8 +1,5 @@
 package com.example.ProjectService.Events;
 
-import com.example.ProjectService.Project.Project;
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 import java.io.Serializable;
 import java.util.Date;
 

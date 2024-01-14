@@ -1,17 +1,15 @@
 package com.example.ProjectService;
 
-import AzureServices.KeyVaultService;
+import com.example.ProjectService.AzureServices.KeyVaultService;
 import com.azure.security.keyvault.secrets.SecretClient;
-import com.example.ProjectService.Project.Project;
-import com.example.ProjectService.Project.dtos.ProjectDto;
-import com.example.ProjectService.Project.dtos.ProjectMemberDto;
+import com.example.ProjectService.ProjectRole.Project.dtos.ProjectDto;
+import com.example.ProjectService.ProjectRole.Project.dtos.ProjectMemberDto;
 import com.example.ProjectService.kafka.ProjectProducer;
 import com.example.ProjectService.kafka.RegistrationConsumer;
 import com.example.ProjectService.kafka.RegistrationDeleteConsumer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
@@ -29,12 +27,9 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import javax.crypto.SecretKey;
-
-import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.*;
 
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.user;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.asyncDispatch;
@@ -43,14 +38,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 import java.time.Instant;
-import java.time.temporal.ChronoUnit;
 import java.util.Date;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest(
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,

@@ -1,7 +1,6 @@
 package com.example.ProjectService.kafka;
 
 import com.example.ProjectService.Events.ProjectCreatedEvent;
-import com.example.ProjectService.Project.Project;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.kafka.clients.admin.NewTopic;
