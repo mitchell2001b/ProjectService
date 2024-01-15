@@ -8,6 +8,8 @@ import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import io.micrometer.core.instrument.Counter;
+import io.micrometer.core.instrument.Gauge;
+import io.micrometer.core.instrument.Meter;
 import io.micrometer.core.instrument.MeterRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,6 +43,7 @@ public class ProjectController
     private final Environment environment;
 
     private Counter createCallsCounter;
+    private Gauge httpRequestsPerSecondGauge;
     private String secretKey;
     @Autowired
     public ProjectController(ProjectService service, MeterRegistry meterRegistry, KeyVaultService vaultService, Environment envi)
@@ -66,6 +69,10 @@ public class ProjectController
     public ResponseEntity<String> CreateProject(@RequestBody ProjectDto newProject, @RequestHeader(name = "Authorization") String authorizationHeader)
     {
         createCallsCounter = microMeterRegistry.counter("project.create.calls", "type", "project");
+
+        httpRequestsPerSecondGauge = Gauge.builder("http.requests.per.second.project.create", this, ProjectController::GetHttpRequestsPerSecond)
+                .tag("type", "project")
+                .register(microMeterRegistry);
 
         String jwtToken = authorizationHeader.replace("Bearer ", "");
         if (environment.matchesProfiles("test"))
@@ -183,6 +190,12 @@ public class ProjectController
     {
         return "tes dit is tes";
     }
+
+    private double GetHttpRequestsPerSecond()
+    {
+        return createCallsCounter.count() / createCallsCounter.measure().iterator().next().getValue();
+    }
+
 }
 
 
