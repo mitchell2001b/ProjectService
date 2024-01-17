@@ -5,8 +5,11 @@ import com.example.ProjectService.dtos.ProjectDto;
 import com.example.ProjectService.dtos.ProjectMemberDto;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
+import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
+
+
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.Gauge;
 import io.micrometer.core.instrument.Meter;
@@ -88,7 +91,20 @@ public class ProjectController
 
         createCallsCounter.increment();
         SecretKey signingKey = Keys.hmacShaKeyFor(secretKey.getBytes());
-        Jws<Claims> jws = Jwts.parser().setSigningKey(signingKey).build().parseClaimsJws(jwtToken);
+        Jws<Claims> jws;
+        try
+        {
+            jws = Jwts.parser().verifyWith(signingKey).build().parseSignedClaims(jwtToken);
+
+        }
+        catch (JwtException e)
+        {
+
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                    .body("Not authorized");
+        }
+
+
         Claims claims = jws.getBody();
         String roleName = (String) claims.get("roleName");
 
@@ -168,12 +184,23 @@ public class ProjectController
             secretKey = keyVaultService.getSecretValue("semester6key");
         }
         SecretKey signingKey = Keys.hmacShaKeyFor(secretKey.getBytes());
-        Jws<Claims> jws = Jwts.parser().setSigningKey(signingKey).build().parseClaimsJws(jwtToken);
+        Jws<Claims> jws;
+        try
+        {
+            jws = Jwts.parser().verifyWith(signingKey).build().parseSignedClaims(jwtToken);
+
+        }
+        catch (JwtException e)
+        {
+            return CompletableFuture.completedFuture(ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null));
+        }
+
         Claims claims = jws.getBody();
         String roleName = (String) claims.get("roleName");
+        Long userId = ((Number) claims.get("id")).longValue();
 
 
-        if (!"user".equals(roleName) && !"admin".equals(roleName))
+        if (!"user".equals(roleName) && !"admin".equals(roleName) && !userId.equals(ownerDto.GetId()))
         {
             return CompletableFuture.completedFuture(ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null));
         }
@@ -195,6 +222,8 @@ public class ProjectController
     {
         return createCallsCounter.count() / createCallsCounter.measure().iterator().next().getValue();
     }
+
+
 
 }
 
