@@ -10,10 +10,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 
 
-import io.micrometer.core.instrument.Counter;
-import io.micrometer.core.instrument.Gauge;
-import io.micrometer.core.instrument.Meter;
-import io.micrometer.core.instrument.MeterRegistry;
+import io.micrometer.core.instrument.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.env.Environment;
@@ -28,6 +25,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.crypto.SecretKey;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -46,6 +44,8 @@ public class ProjectController
     private final Environment environment;
 
     private Counter createCallsCounter;
+
+    private Timer httpRequestsTimer;
     private Gauge httpRequestsPerSecondGauge;
     private String secretKey;
     @Autowired
@@ -55,6 +55,18 @@ public class ProjectController
         this.microMeterRegistry = meterRegistry;
         this.keyVaultService = vaultService;
         this.environment = envi;
+
+        this.httpRequestsTimer = Timer.builder("http.requests.timer.create")
+                .publishPercentileHistogram()
+                .register(meterRegistry);
+
+
+        this.httpRequestsPerSecondGauge = Gauge.builder("http.requests.per.second.create", this, value -> {
+                    double totalCount = httpRequestsTimer.count();
+                    double totalTimeSeconds = httpRequestsTimer.totalTime(TimeUnit.SECONDS);
+                    return totalCount / totalTimeSeconds;
+                })
+                .register(meterRegistry);
     }
 
 
@@ -73,60 +85,53 @@ public class ProjectController
     {
         createCallsCounter = microMeterRegistry.counter("project.create.calls", "type", "project");
 
-        httpRequestsPerSecondGauge = Gauge.builder("http.requests.per.second.project.create", this, ProjectController::GetHttpRequestsPerSecond)
-                .tag("type", "project")
-                .register(microMeterRegistry);
+        ResponseEntity<String> responseEntity = httpRequestsTimer.record(() -> {
 
-        String jwtToken = authorizationHeader.replace("Bearer ", "");
-        if (environment.matchesProfiles("test"))
-        {
-            secretKey = "MockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectService";
-        }
-        else
-        {
-            secretKey = keyVaultService.getSecretValue("semester6key");
-        }
+            String jwtToken = authorizationHeader.replace("Bearer ", "");
+            if (environment.matchesProfiles("test")) {
+                secretKey = "MockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectService";
+            } else {
+                secretKey = keyVaultService.getSecretValue("semester6key");
+            }
 
-        Project project = null;
+            Project project = null;
 
-        createCallsCounter.increment();
-        SecretKey signingKey = Keys.hmacShaKeyFor(secretKey.getBytes());
-        Jws<Claims> jws;
-        try
-        {
-            jws = Jwts.parser().verifyWith(signingKey).build().parseSignedClaims(jwtToken);
+            createCallsCounter.increment();
+            SecretKey signingKey = Keys.hmacShaKeyFor(secretKey.getBytes());
+            Jws<Claims> jws;
+            try {
+                jws = Jwts.parser().verifyWith(signingKey).build().parseSignedClaims(jwtToken);
 
-        }
-        catch (JwtException e)
-        {
+            } catch (JwtException e) {
 
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
-                    .body("Not authorized");
-        }
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                        .body("Not authorized");
+            }
 
 
-        Claims claims = jws.getBody();
-        String roleName = (String) claims.get("roleName");
+            Claims claims = jws.getBody();
+            String roleName = (String) claims.get("roleName");
 
 
-        if (!"user".equals(roleName) && !"admin".equals(roleName))
-        {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
-                    .body("Not authorized");
-        }
-        try
-        {
-            project = projectService.CreateProject(newProject);
+            if (!"user".equals(roleName) && !"admin".equals(roleName)) {
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                        .body("Not authorized");
+            }
+            try {
+                project = projectService.CreateProject(newProject);
 
-        }
-        catch (Exception e)
-        {
-            LOGGER.error("Error creating project", e);
-            return ResponseEntity.status(HttpStatus.CONFLICT)
-                    .body(e.toString());
-        }
-        return ResponseEntity.status(HttpStatus.CREATED)
-                .body("Project created successfully");
+            } catch (Exception e) {
+                LOGGER.error("Error creating project", e);
+                return ResponseEntity.status(HttpStatus.CONFLICT)
+                        .body(e.toString());
+            }
+
+            return ResponseEntity.status(HttpStatus.CREATED)
+                    .body("Project created successfully");
+
+        });
+
+        return responseEntity;
     }
 
 
@@ -217,14 +222,6 @@ public class ProjectController
     {
         return "tes dit is tes";
     }
-
-    private double GetHttpRequestsPerSecond()
-    {
-        return createCallsCounter.count() / createCallsCounter.measure().iterator().next().getValue();
-    }
-
-
-
 }
 
 
