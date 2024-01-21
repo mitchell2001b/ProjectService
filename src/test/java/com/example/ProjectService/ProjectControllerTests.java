@@ -2,6 +2,7 @@ package com.example.ProjectService;
 
 import com.example.ProjectService.AzureServices.KeyVaultService;
 import com.azure.security.keyvault.secrets.SecretClient;
+import com.example.ProjectService.Configuration.KeyVaultConfig;
 import com.example.ProjectService.dtos.ProjectDto;
 import com.example.ProjectService.dtos.ProjectMemberDto;
 import com.example.ProjectService.kafka.ProjectProducer;
@@ -52,7 +53,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc()
 @ActiveProfiles("test")
 @TestPropertySource(locations = "classpath:application-test.properties")
-@MockBean({RegistrationConsumer.class, ProjectProducer.class, RegistrationDeleteConsumer.class, SecretClient.class, KeyVaultService.class})
+@MockBean({RegistrationConsumer.class, ProjectProducer.class, RegistrationDeleteConsumer.class, SecretClient.class, KeyVaultService.class, KeyVaultConfig.class})
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
 @WithMockUser(roles = {})
 class ProjectControllerTests {
