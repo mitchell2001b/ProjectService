@@ -52,7 +52,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc()
 @ActiveProfiles("test")
 @TestPropertySource(locations = "classpath:application-test.properties")
-@MockBean({RegistrationConsumer.class, ProjectProducer.class, RegistrationDeleteConsumer.class, SecretClient.class})
+@MockBean({RegistrationConsumer.class, ProjectProducer.class, RegistrationDeleteConsumer.class, SecretClient.class, KeyVaultService.class})
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
 @WithMockUser(roles = {})
 class ProjectControllerTests {

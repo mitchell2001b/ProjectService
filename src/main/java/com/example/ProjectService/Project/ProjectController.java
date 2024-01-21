@@ -69,17 +69,6 @@ public class ProjectController
                 .register(meterRegistry);
     }
 
-
-
-
-
-
-    public static boolean isTestingEnvironment()
-    {
-        String activeProfiles = System.getProperty(ENVIRONMENT_PROPERTY);
-        return activeProfiles != null && activeProfiles.contains(TEST_PROFILE);
-    }
-
     @PostMapping(value = "/create")
     public ResponseEntity<String> CreateProject(@RequestBody ProjectDto newProject, @RequestHeader(name = "Authorization") String authorizationHeader)
     {
@@ -88,9 +77,11 @@ public class ProjectController
         ResponseEntity<String> responseEntity = httpRequestsTimer.record(() -> {
 
             String jwtToken = authorizationHeader.replace("Bearer ", "");
-            if (environment.matchesProfiles("test")) {
+            if (environment.matchesProfiles("test"))
+            {
                 secretKey = "MockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectService";
-            } else {
+            } else
+            {
                 secretKey = keyVaultService.getSecretValue("semester6key");
             }
 
@@ -99,7 +90,8 @@ public class ProjectController
             createCallsCounter.increment();
             SecretKey signingKey = Keys.hmacShaKeyFor(secretKey.getBytes());
             Jws<Claims> jws;
-            try {
+            try
+            {
                 jws = Jwts.parser().verifyWith(signingKey).build().parseSignedClaims(jwtToken);
 
             } catch (JwtException e) {
@@ -113,11 +105,13 @@ public class ProjectController
             String roleName = (String) claims.get("roleName");
 
 
-            if (!"user".equals(roleName) && !"admin".equals(roleName)) {
+            if (!"user".equals(roleName) && !"admin".equals(roleName))
+            {
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
                         .body("Not authorized");
             }
-            try {
+            try
+            {
                 project = projectService.CreateProject(newProject);
 
             } catch (Exception e) {
@@ -134,43 +128,6 @@ public class ProjectController
         return responseEntity;
     }
 
-
-    /*@PostMapping(value = "/myprojects")
-    public ResponseEntity<List<ProjectDto>> GetAllProjectsFromOwner(@RequestBody ProjectMemberDto ownerDto)
-    {
-        if(ownerDto == null)
-        {
-            return ResponseEntity.badRequest().build();
-        }
-        List<ProjectDto> dtos = null;
-
-        try
-        {
-            dtos = this.projectService.GetAllProjectsFromOwner(ownerDto);
-            return ResponseEntity.ok(dtos);
-        }
-        catch (RedisConnectionFailureException e)
-        {
-            dtos = this.projectService.GetAllProjectsFromOwnerInDb(ownerDto);
-            return ResponseEntity.ok(dtos);
-        }
-        catch (RedisConnectionException e)
-        {
-            dtos = this.projectService.GetAllProjectsFromOwnerInDb(ownerDto);
-            return ResponseEntity.ok(dtos);
-        }
-        catch (RedisCommandTimeoutException e)
-        {
-            dtos = this.projectService.GetAllProjectsFromOwnerInDb(ownerDto);
-            return ResponseEntity.ok(dtos);
-        }
-        catch (Exception e)
-        {
-            LOGGER.error("Error getting my projects", e);
-        }
-        return null;
-
-    }*/
     @PostMapping(value = "/myprojects")
     public CompletableFuture<ResponseEntity<List<ProjectDto>>> GetAllProjectsFromOwner(@RequestBody ProjectMemberDto ownerDto, @RequestHeader(name = "Authorization") String authorizationHeader) {
 
@@ -217,10 +174,43 @@ public class ProjectController
                     return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
                 });
     }
-    @GetMapping(value = "/tess")
-    public String tess()
+
+    @GetMapping(value = "/updateprojectmodel")
+    public CompletableFuture<ResponseEntity<String>> UpdateProjectModel(@RequestHeader(name = "Authorization") String authorizationHeader)
     {
-        return "tes dit is tes";
+        String jwtToken = authorizationHeader.replace("Bearer ", "");
+
+        if (environment.matchesProfiles("test"))
+        {
+            secretKey = "MockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectService";
+        }
+        else
+        {
+            secretKey = keyVaultService.getSecretValue("semester6key");
+        }
+        SecretKey signingKey = Keys.hmacShaKeyFor(secretKey.getBytes());
+        Jws<Claims> jws;
+        try
+        {
+            jws = Jwts.parser().verifyWith(signingKey).build().parseSignedClaims(jwtToken);
+
+        }
+        catch (JwtException e)
+        {
+            return CompletableFuture.completedFuture(ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Token invalid"));
+        }
+
+        Claims claims = jws.getBody();
+        String roleName = (String) claims.get("roleName");
+
+        if (!"user".equals(roleName) && !"admin".equals(roleName))
+        {
+            return CompletableFuture.completedFuture(ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                    .body("Not authorized, you are not a admin"));
+        }
+        return CompletableFuture.completedFuture(ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                .body("you are a admin and can use this endpoint"));
+
     }
 }
 
