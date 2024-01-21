@@ -203,12 +203,12 @@ public class ProjectController
         Claims claims = jws.getBody();
         String roleName = (String) claims.get("roleName");
 
-        if (!"user".equals(roleName) && !"admin".equals(roleName))
+        if (!"admin".equals(roleName))
         {
             return CompletableFuture.completedFuture(ResponseEntity.status(HttpStatus.UNAUTHORIZED)
                     .body("Not authorized, you are not a admin"));
         }
-        return CompletableFuture.completedFuture(ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+        return CompletableFuture.completedFuture(ResponseEntity.status(HttpStatus.OK)
                 .body("you are a admin and can use this endpoint"));
 
     }
