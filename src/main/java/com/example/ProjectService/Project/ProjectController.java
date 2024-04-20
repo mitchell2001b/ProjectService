@@ -82,7 +82,8 @@ public class ProjectController
                 secretKey = "MockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectService";
             } else
             {
-                secretKey = keyVaultService.getSecretValue("semester6key");
+                //secretKey = keyVaultService.getSecretValue("semester6key");
+                secretKey = "MockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectService";
             }
 
             Project project = null;
@@ -143,7 +144,8 @@ public class ProjectController
         }
         else
         {
-            secretKey = keyVaultService.getSecretValue("semester6key");
+            secretKey = "MockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectService";
+            //secretKey = keyVaultService.getSecretValue("semester6key");
         }
         SecretKey signingKey = Keys.hmacShaKeyFor(secretKey.getBytes());
         Jws<Claims> jws;
@@ -186,7 +188,8 @@ public class ProjectController
         }
         else
         {
-            secretKey = keyVaultService.getSecretValue("semester6key");
+            //secretKey = keyVaultService.getSecretValue("semester6key");
+            secretKey = "MockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectServiceMockKeyForSemester6TestInprojectService";
         }
         SecretKey signingKey = Keys.hmacShaKeyFor(secretKey.getBytes());
         Jws<Claims> jws;
